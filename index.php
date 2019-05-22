@@ -4,8 +4,6 @@
   }
 
 	if (!isset($_SESSION['username'])) {
-		$_SESSION['msg'] = "You must log in first";
-		//echo $_SESSION['msg'];
 		header("location: login.php");
 	}
 
@@ -18,8 +16,8 @@
         <!-- logged in user information -->
     		<?php if (isset($_SESSION['username'])) : ?>
 
-				<h4><?php echo $pageTitle; ?></h4>
-        <hr class="mb-4">
+				<h1><?php echo $pageTitle; ?></h1>
+        <hr>
 
 				<form method="post">
 					<?php echo $alert; ?>

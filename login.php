@@ -5,8 +5,8 @@
 
 		<main class="container">
 
-				<h4><?php echo $pageTitle; ?></h4>
-				<hr class="mb-4">
+				<h1><?php echo $pageTitle; ?></h1>
+				<hr>
 
 				<form action="login.php" method="POST" >
 					<?php include('inc/loginerrors.php'); ?>
