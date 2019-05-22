@@ -31,13 +31,12 @@
         </a>
 
         <?php 
-        if (isset($_SESSION["username"])) :
-          echo '<span>Welcome: <strong><?php	echo $_SESSION["username"]; ?></strong></span>';
-    			echo '<a href="index.php?logout="1"">Logout</a>';
-        else :
-          echo '<a href="login.php" role="button">Login</a>';
-          echo '<a href="register.php" role="button">Register</a>';
-        endif 
-        ?>
+        if (isset($_SESSION["username"])) : ?>
+          <span>Welcome: <?php echo $_SESSION["username"]; ?></span>
+    			<a href="index.php?logout="1"">Logout</a>
+        <?php else : ?>
+          <a href="login.php" role="button">Login</a>
+          <a href="register.php" role="button">Register</a>
+        <?php endif ?>
 
     </header>
