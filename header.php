@@ -26,7 +26,6 @@
   <body>
 
     <header class="header">
-      
       <div class="container-fluid">
 
         <div class="row d-flex align-items-center">

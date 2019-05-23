@@ -62,6 +62,13 @@
 
 					</div>
 
+					<?php 
+            if (isset($_SESSION["id"])) : ?>
+              <div class="text-right">Hello <?php echo $_SESSION["id"]; ?>!</div>
+            <?php else : ?>
+              
+            <?php endif ?>
+
 			</div>
 
 		</main>
