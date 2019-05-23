@@ -10,7 +10,7 @@
 	}
 
   include 'inc/auth.php';
-  include 'inc/ticket.php';
+  include 'inc/log-ticket.php';
 
   $siteTitle = 'Helpdesk';
 ?>
@@ -39,24 +39,24 @@
           
           <div class="col">
             <ul class="list_left">
-              <li><a href="index.php">New ticket</a></li>
-              <li><a href="tickets.php">Open tickets</a></li>
+              <li><a href="./">Dashboard</a></li>
+              <li><a href="new-ticket.php">New ticket</a></li>
             </ul>
           </div>
-
+          
           <div class="col-auto">
             <?php 
             if (isset($_SESSION["username"])) : ?>
-              <ul class="list_right">
-                <li><a href="profile.php" class="">Profile</a></li>
-                <li><a href="settings.php" class="">Settings</a></li>
-                <li><a href="index.php?logout='1'" class="">Logout</a></li>
-              </ul>
               <div class="text-right">Hello <?php echo $_SESSION["username"]; ?>!</div>
+              <ul class="list_right">
+                <li><a href="profile.php">Profile</a></li>
+                <li><a href="settings.php">Settings</a></li>
+                <li><a href="index.php?logout='1'">Logout</a></li>
+              </ul>
             <?php else : ?>
               <ul class="list_right">
-                <li><a href="register.php" class="">Register</a></li>
-                <li><a href="login.php" class="">Login</a></li>
+                <li><a href="register.php">Register</a></li>
+                <li><a href="login.php">Login</a></li>
               </ul>
             <?php endif ?>
           </div>

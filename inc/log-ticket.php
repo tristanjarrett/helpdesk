@@ -6,7 +6,6 @@
 	$summary = "";
 	$description = "";
 	$errors = array();
-	$_SESSION['success'] = "";
 
 	// connect database
 	require_once 'config/database.php';
@@ -27,12 +26,10 @@
 		if (empty($summary)) { array_push($errors, "Summary is required"); }
 		if (empty($description)) { array_push($errors, "Description is required"); }
 
-		// register user if there are no errors in the form
+		// create ticket if there are no errors in the form
 		if (count($errors) == 0) {
 			$query = "INSERT INTO tickets (type, priority, summary, description) VALUES('$type', '$priority', '$summary', '$description')";
 			mysqli_query($db, $query);
-
-			$_SESSION['success'] = "New ticket created successfully";
-			header('location: tickets.php');
+			header('location: index.php');
 		}
 	}

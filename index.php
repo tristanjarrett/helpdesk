@@ -7,59 +7,59 @@
 		header("location: login.php");
 	}
 
-  $pageTitle = 'New ticket';
-  include 'header.php';
+	$pageTitle = 'Tickets';
+ 	include 'header.php';
 ?>
 
-    <main>
+		<main>
 
 			<div class="container">
 
 				<h1 class="h3"><?php echo $pageTitle; ?></h1>
 				<hr>
 
-				<form action="index.php" method="POST">
+				<table class="table table-bordered table-striped">
 
-					<?php include('inc/error.php'); ?>
+					<thead>
+						<tr>
+							<th>Summary</th>
+							<th>ID</th>
+							<th>Call type</th>
+							<th>Priority</th>
+						</tr>
+					</thead>
 
-					<div class="form-group">
-						<label>Call type</label>
-						<select class="form-control" name="type" value="<?php echo $type; ?>">
-							<option selected disabled>Please select</option>
-							<option value="support">Support Request</option>
-							<option value="project">Project</option>
-						</select>
-					</div>
+					<tbody>
 
-					<div class="form-group">
-						<label>Priority</label>
-						<select class="form-control" name="priority" value="<?php echo $priority; ?>">
-							<option selected disabled>Please select</option>
-							<option value="low">Low</option>
-							<option value="medium">Medium</option>
-							<option value="high">High</option>
-						</select>
-					</div>
+					<?php 
 
-					<div class="form-group">
-						<label>Summary</label>
-						<input class="form-control" type="text" name="summary" placeholder="Summary" value="<?php echo $summary; ?>">
-					</div>
+					if ($db-> connect_error) {
+						die("Connection failed:" . $db->connect_error);
+					}
 
-					<div class="form-group">
-						<label>Description</label>
-						<textarea class="form-control" name="description" rows="10" placeholder="Detail your request"><?php echo $description; ?></textarea>
-					</div>
+					$tickets_sql = "SELECT id, type, priority, summary from tickets";
+					$result_sql = $db-> query($tickets_sql);
 
-					<div class="text-right">
-						<button class="btn btn-primary" type="submit" name="create_ticket" value="Submit">Submit</button>
-					</div>
-				</form>
+					if ($result_sql-> num_rows > 0) {
+						while ($row_sql = $result_sql->fetch_assoc()) {
+							echo "<tr>";
+							echo "<td>" . $row_sql["summary"] . "</td>";
+							echo "<td>" . $row_sql["id"] . "</td>";
+							echo "<td>" . $row_sql["type"] . "</td>";
+							echo "<td>" . $row_sql["priority"] . "</td>";
+							echo "</tr>";
+						}
+					} else {
+						
+					}
+					
+					?>
+
+					</tbody>
+				</table>
 
 			</div>
 
-    </main>
+		</main>
 
-<?php
-  include 'footer.php';
-?>
+<?php include 'footer.php'; ?>
