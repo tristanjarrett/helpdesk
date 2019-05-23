@@ -5,6 +5,7 @@
 	$priority = "";
 	$summary = "";
 	$description = "";
+	//$timestamp = date('d/m/Y');
 	$errors = array();
 
 	// connect database
@@ -19,6 +20,7 @@
 		$priority = mysqli_real_escape_string($db, $_POST['priority']);
 		$summary = mysqli_real_escape_string($db, $_POST['summary']);
 		$description = mysqli_real_escape_string($db, $_POST['description']);
+		//$timestamp = mysqli_real_escape_string($db, $_POST['timestamp']);
 
 		// form validation: ensure that the form is correctly filled
 		if (empty($type)) { array_push($errors, "Call type is required"); }
@@ -30,6 +32,6 @@
 		if (count($errors) == 0) {
 			$query = "INSERT INTO tickets (type, priority, summary, description) VALUES('$type', '$priority', '$summary', '$description')";
 			mysqli_query($db, $query);
-			header('location: index.php');
+			header('location: ./');
 		}
 	}

@@ -10,28 +10,28 @@
 				<h1 class="h3"><?php echo $pageTitle; ?></h1>
 				<hr>
 
-				<form action="register.php" method="POST">
+				<form action="" method="POST">
 
 					<?php include('inc/error.php'); ?>
 
 					<div class="form-group">
 						<label>Username</label>
-						<input class="form-control" type="text" name="username" placeholder="Username" value="<?php echo $username; ?>">
+						<input class="form-control" type="text" name="username" placeholder="Username" value="<?php echo $username; ?>" required>
 					</div>
 
 					<div class="form-group">
 						<label>Email</label>
-						<input class="form-control" type="email" name="email" placeholder="Email" value="<?php echo $email; ?>">
+						<input class="form-control" type="email" name="email" placeholder="Email" value="<?php echo $email; ?>" required>
 					</div>
 
 					<div class="form-group">
 						<label>Password</label>
-						<input class="form-control" type="password" placeholder="Password" name="password">
+						<input class="form-control" type="password" placeholder="Password" name="password" required>
 					</div>
 
 					<div class="form-group">
 						<label>Verify Password</label>
-						<input class="form-control" type="password" placeholder="Verify Password" name="password_verify">
+						<input class="form-control" type="password" placeholder="Verify Password" name="password_verify" required>
 					</div>
 
 					<div class="text-right">

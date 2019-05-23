@@ -10,18 +10,18 @@
 				<h1 class="h3"><?php echo $pageTitle; ?></h1>
 				<hr>
 
-					<form action="login.php" method="POST">
+					<form action="" method="POST">
 					
 						<?php include('inc/error.php'); ?>
 
 						<div class="form-group">
 							<label for="username">Username</label>
-							<input class="form-control" name="username" type="text" id="username" placeholder="Username">
+							<input class="form-control" name="username" type="text" id="username" placeholder="Username" required>
 						</div>
 
 						<div class="form-group">
 							<label for="password">Password</label>
-							<input class="form-control" name="password" type="password" id="password" placeholder="Password">
+							<input class="form-control" name="password" type="password" id="password" placeholder="Password" required>
 						</div>
 
 						<div class="text-right">

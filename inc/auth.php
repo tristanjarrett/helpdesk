@@ -1,10 +1,5 @@
 <?php
 
-	// start session if not running
-	if(!isset($_SESSION)) {
-  	session_start();
-  }
-
 	// variable declaration
 	$username = "";
 	$email = "";
@@ -35,13 +30,12 @@
 
 		// register user if there are no errors in the form
 		if (count($errors) == 0) {
-			$password = md5($password);//encrypt the password before saving in the database
+			$password = md5($password); // encrypt the password before saving to the database
 			$query = "INSERT INTO users (username, email, password) VALUES('$username', '$email', '$password')";
 			mysqli_query($db, $query);
-
 			$_SESSION['username'] = $username;
 			$_SESSION['success'] = "You are now logged in";
-			header('location: index.php');
+			header('location: ./');
 		}
 	}
 
@@ -60,14 +54,14 @@
 		}
 
 		if (count($errors) == 0) {
-			$password = md5($password);
+			$password = md5($password); // submit encrypted password
 			$query = "SELECT * FROM users WHERE username='$username' AND password='$password'";
 			$results = mysqli_query($db, $query);
 
 			if (mysqli_num_rows($results) == 1) {
 				$_SESSION['username'] = $username;
 				$_SESSION['success'] = "You are now logged in";
-				header('location: index.php');
+				header('location: ./');
 			}else {
 				array_push($errors, "Incorrect Username or Password");
 			}

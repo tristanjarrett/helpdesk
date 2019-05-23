@@ -24,7 +24,6 @@
 
 					<thead>
 						<tr>
-							<th>ID</th>
 							<th>Username</th>
 							<th>Email</th>
 						</tr>
@@ -44,7 +43,6 @@
 					if ($result_sql-> num_rows > 0) {
 						while ($row_sql = $result_sql->fetch_assoc()) {
 							echo "<tr>";
-							echo "<td>" . $row_sql["id"] . "</td>";
 							echo "<td>" . $row_sql["username"] . "</td>";
 							echo "<td>" . $row_sql["email"] . "</td>";
 							echo "</tr>";

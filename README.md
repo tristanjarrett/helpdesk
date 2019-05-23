@@ -12,6 +12,7 @@ CREATE TABLE `tickets` (
   `type` varchar(100) NOT NULL,
   `priority` varchar(100) NOT NULL,
   `summary` varchar(100) NOT NULL,
-  `description` varchar(100) NOT NULL
+  `description` varchar(100) NOT NULL,
+  `timestamp` varchar(100) NOT NULL
 );
 ```
