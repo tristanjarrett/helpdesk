@@ -3,7 +3,7 @@
   // define database options
   $dbServer = 'localhost';
   $dbUser   = 'root';
-  $dbPass   = 'root';
+  $dbPass   = '';
   $dbName   = 'helpdesk';
 
   // connect to database

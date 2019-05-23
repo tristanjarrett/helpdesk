@@ -23,8 +23,9 @@
 			array_push($errors, "Password is required");
 		}
 
+		// login user if there are no errors in the form
 		if (count($errors) == 0) {
-			$password = md5($password); // submit encrypted password
+			$password = md5($password);
 			$query = "SELECT * FROM users WHERE username='$username' AND password='$password'";
 			$results = mysqli_query($db, $query);
 
@@ -42,13 +43,11 @@
 	 * register new user
 	 */ 
 	if (isset($_POST['register_user'])) {
-		// receive all input values from the form
 		$username = mysqli_real_escape_string($db, $_POST['username']);
 		$email = mysqli_real_escape_string($db, $_POST['email']);
 		$password = mysqli_real_escape_string($db, $_POST['password']);
 		$password_verify = mysqli_real_escape_string($db, $_POST['password_verify']);
 
-		// form validation: ensure that the form is correctly filled
 		if (empty($username)) { 
 			array_push($errors, "Username is required"); 
 		}
@@ -65,7 +64,7 @@
 
 		// register user if there are no errors in the form
 		if (count($errors) == 0) {
-			$password = md5($password); // encrypt the password before saving to the database
+			$password = md5($password);
 			$query = "INSERT INTO users (username, email, password) VALUES('$username', '$email', '$password')";
 			mysqli_query($db, $query);
 			$_SESSION['success'] = "You are now registered";
@@ -78,13 +77,11 @@
 	 * create new user
 	 */ 
 	if (isset($_POST['create_user'])) {
-		// receive all input values from the form
 		$username = mysqli_real_escape_string($db, $_POST['username']);
 		$email = mysqli_real_escape_string($db, $_POST['email']);
 		$password = mysqli_real_escape_string($db, $_POST['password']);
 		$password_verify = mysqli_real_escape_string($db, $_POST['password_verify']);
 
-		// form validation: ensure that the form is correctly filled
 		if (empty($username)) { 
 			array_push($errors, "Username is required"); 
 		}
@@ -99,9 +96,9 @@
 			array_push($errors, "The two passwords do not match");
 		}
 
-		// register user if there are no errors in the form
+		// create user if there are no errors in the form
 		if (count($errors) == 0) {
-			$password = md5($password); // encrypt the password before saving to the database
+			$password = md5($password);
 			$query = "INSERT INTO users (username, email, password) VALUES('$username', '$email', '$password')";
 			mysqli_query($db, $query);
 			$_SESSION['success'] = "New user created successfully";
