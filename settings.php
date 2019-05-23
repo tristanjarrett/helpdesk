@@ -15,46 +15,95 @@
 
 			<div class="container">
 
-				<h1 class="h3"><?php echo $pageTitle; ?></h1>
-				<hr>
+				<div class="global_panel">
 
-				<h2 class="h4">Users</h2>
+					<h1 class="h3"><?php echo $pageTitle; ?></h1>
+					<hr>
 
-				<table class="table table-bordered table-striped">
+					<div class="row">
 
-					<thead>
-						<tr>
-							<th>Username</th>
-							<th>Email</th>
-						</tr>
-					</thead>
+						<div class="col-3">
+							<div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+								<a class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">Users</a>
+								<a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false">Create user</a>
+							</div>
+						</div>
 
-					<tbody>
+						<div class="col-9">
+							<div class="tab-content" id="v-pills-tabContent">
 
-					<?php 
+								<div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
+								
+									<h2 class="h4 mb-4">Users</h2>
+									<table class="table table-bordered table-striped">
+										<thead>
+											<tr>
+												<th>Username</th>
+												<th>Email</th>
+											</tr>
+										</thead>
+										<tbody>
+										<?php 
+										if ($db-> connect_error) {
+											die("Connection failed:" . $db->connect_error);
+										}
+										$users_sql = "SELECT username, email, id from users";
+										$result_sql = $db-> query($users_sql);
+										if ($result_sql-> num_rows > 0) {
+											while ($row_sql = $result_sql->fetch_assoc()) {
+												echo "<tr>";
+												echo "<td>" . $row_sql["username"] . "</td>";
+												echo "<td>" . $row_sql["email"] . "</td>";
+												echo "</tr>";
+											}
+										} else {
+											
+										}
+										?>
+										</tbody>
+									</table>
+									</div>
 
-					if ($db-> connect_error) {
-						die("Connection failed:" . $db->connect_error);
-					}
+								<div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
 
-					$users_sql = "SELECT username, email, id from users";
-					$result_sql = $db-> query($users_sql);
+									<h2 class="h4 mb-4">Create user</h2>
+									<form action="" method="POST">
 
-					if ($result_sql-> num_rows > 0) {
-						while ($row_sql = $result_sql->fetch_assoc()) {
-							echo "<tr>";
-							echo "<td>" . $row_sql["username"] . "</td>";
-							echo "<td>" . $row_sql["email"] . "</td>";
-							echo "</tr>";
-						}
-					} else {
-						
-					}
-					
-					?>
+										<?php include('inc/errors.php'); ?>
 
-					</tbody>
-				</table>
+										<div class="form-group">
+											<label>Username</label>
+											<input class="form-control" type="text" name="username" placeholder="Username" value="<?php echo $username; ?>" required>
+										</div>
+
+										<div class="form-group">
+											<label>Email</label>
+											<input class="form-control" type="email" name="email" placeholder="Email" value="<?php echo $email; ?>" required>
+										</div>
+
+										<div class="form-group">
+											<label>Password</label>
+											<input class="form-control" type="password" placeholder="Password" name="password" required>
+										</div>
+
+										<div class="form-group">
+											<label>Verify Password</label>
+											<input class="form-control" type="password" placeholder="Verify Password" name="password_verify" required>
+										</div>
+
+										<div class="text-right">
+											<button class="btn btn-primary" type="submit" name="register_user">Create user</button>
+										</div>
+
+									</form>
+
+								</div>
+							</div>
+						</div>
+
+					</div>
+
+				</div>
 
 			</div>
 

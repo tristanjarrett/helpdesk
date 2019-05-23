@@ -7,12 +7,14 @@
 
 			<div class="container">
 
-				<h1 class="h3"><?php echo $pageTitle; ?></h1>
-				<hr>
+				<div class="global_panel">
+
+					<h1 class="h3"><?php echo $pageTitle; ?></h1>
+					<hr>
 
 					<form action="" method="POST">
 					
-						<?php include('inc/error.php'); ?>
+						<?php include('inc/errors.php'); ?>
 
 						<div class="form-group">
 							<label for="username">Username</label>
@@ -29,6 +31,8 @@
 						</div>
 
 					</form>
+
+				</div>
 
 			</div>
 

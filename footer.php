@@ -1,5 +1,6 @@
     <footer class="footer">
       <div class="container">
+        <hr>
         <span>&copy; <?php echo date('Y') . ' ' . $siteTitle; ?></span>
       </div>
     </footer>

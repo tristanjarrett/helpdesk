@@ -9,8 +9,8 @@
 		header("location: login.php");
 	}
 
-  include 'inc/auth.php';
-  include 'inc/log-ticket.php';
+  include 'inc/users.php';
+  include 'inc/tickets.php';
 
   $siteTitle = 'Helpdesk';
 ?>
@@ -49,7 +49,6 @@
             if (isset($_SESSION["username"])) : ?>
               <div class="text-right">Hello <?php echo $_SESSION["username"]; ?>!</div>
               <ul class="list_right">
-                <li><a href="profile.php">Profile</a></li>
                 <li><a href="settings.php">Settings</a></li>
                 <li><a href="index.php?logout='1'">Logout</a></li>
               </ul>
