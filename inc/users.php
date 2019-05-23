@@ -5,6 +5,7 @@
 	$email = "";
 	$errors = array();
 	$_SESSION['success'] = "";
+	$_SESSION['error'] = "";
 
 	// connect database
 	require_once 'config/database.php';
@@ -67,10 +68,10 @@
 			$password = md5($password);
 			$query = "INSERT INTO users (username, email, password) VALUES('$username', '$email', '$password')";
 			mysqli_query($db, $query);
-			$_SESSION['success'] = "You are now registered";
 			$_SESSION['username'] = $username;
+			$_SESSION['success'] = '<div class="alert alert-success">Registration was successfull</div>';
 			header('location: ./');
-		}
+		} 
 	}
 
 	/**
@@ -101,6 +102,8 @@
 			$password = md5($password);
 			$query = "INSERT INTO users (username, email, password) VALUES('$username', '$email', '$password')";
 			mysqli_query($db, $query);
-			$_SESSION['success'] = "New user created successfully";
+			$_SESSION['success'] = '<div class="alert alert-success">New user created successfully</div>';
+		} else {
+			$_SESSION['error'] = '<div class="alert alert-danger">User not created</div>';
 		}
 	}

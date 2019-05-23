@@ -17,23 +17,23 @@
 						<?php include('inc/errors.php'); ?>
 
 						<div class="form-group">
-							<label>Username</label>
-							<input class="form-control" type="text" name="username" placeholder="Username" value="<?php echo $username; ?>" required>
+							<label for="username">Username</label>
+							<input class="form-control" type="text" name="username" id="username" placeholder="Username">
 						</div>
 
 						<div class="form-group">
-							<label>Email</label>
-							<input class="form-control" type="email" name="email" placeholder="Email" value="<?php echo $email; ?>" required>
+							<label for="email">Email</label>
+							<input class="form-control" type="email" name="email" id="email" placeholder="Email">
 						</div>
 
 						<div class="form-group">
-							<label>Password</label>
-							<input class="form-control" type="password" placeholder="Password" name="password" required>
+							<label for="password">Password</label>
+							<input class="form-control" type="password" name="password" id="password" placeholder="Password">
 						</div>
 
 						<div class="form-group">
-							<label>Verify Password</label>
-							<input class="form-control" type="password" placeholder="Verify Password" name="password_verify" required>
+							<label for="password_verify">Verify Password</label>
+							<input class="form-control" type="password" name="password_verify" id="password_verify" placeholder="Verify Password">
 						</div>
 
 						<div class="text-right">

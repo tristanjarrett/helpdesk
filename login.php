@@ -18,12 +18,12 @@
 
 						<div class="form-group">
 							<label for="username">Username</label>
-							<input class="form-control" name="username" type="text" id="username" placeholder="Username" required>
+							<input class="form-control" name="username" type="text" id="username" placeholder="Username">
 						</div>
 
 						<div class="form-group">
 							<label for="password">Password</label>
-							<input class="form-control" name="password" type="password" id="password" placeholder="Password" required>
+							<input class="form-control" name="password" type="password" id="password" placeholder="Password">
 						</div>
 
 						<div class="text-right">
