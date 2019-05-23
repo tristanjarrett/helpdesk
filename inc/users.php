@@ -49,9 +49,15 @@
 		$password_verify = mysqli_real_escape_string($db, $_POST['password_verify']);
 
 		// form validation: ensure that the form is correctly filled
-		if (empty($username)) { array_push($errors, "Username is required"); }
-		if (empty($email)) { array_push($errors, "Email is required"); }
-		if (empty($password)) { array_push($errors, "Password is required"); }
+		if (empty($username)) { 
+			array_push($errors, "Username is required"); 
+		}
+		if (empty($email)) { 
+			array_push($errors, "Email is required"); 
+		}
+		if (empty($password)) { 
+			array_push($errors, "Password is required"); 
+		}
 
 		if ($password != $password_verify) {
 			array_push($errors, "The two passwords do not match");
@@ -79,9 +85,15 @@
 		$password_verify = mysqli_real_escape_string($db, $_POST['password_verify']);
 
 		// form validation: ensure that the form is correctly filled
-		if (empty($username)) { array_push($errors, "Username is required"); }
-		if (empty($email)) { array_push($errors, "Email is required"); }
-		if (empty($password)) { array_push($errors, "Password is required"); }
+		if (empty($username)) { 
+			array_push($errors, "Username is required"); 
+		}
+		if (empty($email)) { 
+			array_push($errors, "Email is required"); 
+		}
+		if (empty($password)) { 
+			array_push($errors, "Password is required"); 
+		}
 
 		if ($password != $password_verify) {
 			array_push($errors, "The two passwords do not match");
