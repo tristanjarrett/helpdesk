@@ -39,7 +39,7 @@
           <div class="col">
             <ul class="list_left">
               <li><a href="index.php">New ticket</a></li>
-              <li><a href="index.php">Open tickets</a></li>
+              <li><a href="tickets.php">Open tickets</a></li>
             </ul>
           </div>
 
