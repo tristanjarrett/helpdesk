@@ -11,11 +11,13 @@
 	$errors = array();
 	$_SESSION['success'] = "";
 
-	// access database
-	require_once 'database.php';
+	// connect database
+	require_once 'config/database.php';
 
-	// register new user
-	if (isset($_POST['reg_user'])) {
+	/**
+	 * register new user
+	 */ 
+	if (isset($_POST['register_user'])) {
 		// receive all input values from the form
 		$username = mysqli_real_escape_string($db, $_POST['username']);
 		$email = mysqli_real_escape_string($db, $_POST['email']);
@@ -39,14 +41,14 @@
 			mysqli_query($db, $query);
 
 			$_SESSION['username'] = $username;
-			$_SESSION['email'] = $email;
 			$_SESSION['success'] = "You are now logged in";
 			header('location: index.php');
 		}
-
 	}
 
-	// login user
+	/**
+	 * login user
+	 */ 
 	if (isset($_POST['login_user'])) {
 		$username = mysqli_real_escape_string($db, $_POST['username']);
 		$password = mysqli_real_escape_string($db, $_POST['password']);
@@ -66,7 +68,7 @@
 			if (mysqli_num_rows($results) == 1) {
 				$_SESSION['username'] = $username;
 				$_SESSION['success'] = "You are now logged in";
-				header('location: ./');
+				header('location: index.php');
 			}else {
 				array_push($errors, "Incorrect Username or Password");
 			}

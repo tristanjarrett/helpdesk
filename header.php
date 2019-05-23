@@ -9,8 +9,7 @@
 		header("location: login.php");
 	}
 
-	include 'inc/loginsystem.php';
-  include 'inc/crmsystem.php';
+	include 'inc/auth.php';
 
   $siteTitle = 'Helpdesk';
 ?>
@@ -20,31 +19,47 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
     <title><?php echo $pageTitle . ' - ' . $siteTitle; ?></title>
-    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link href="css/main.css" rel="stylesheet">
   </head>
   <body>
 
     <header class="header">
 
-      <div class="container mx-auto flex">
+      <div class="container-fluid">
 
-        <div class="flex-auto">
-          <a href="./" class="brand">
-            <?php echo $siteTitle; ?>
-          </a>
-        </div>
+        <div class="row d-flex align-items-center">
 
-        <div class="flex-initial">
-          <?php 
-          if (isset($_SESSION["username"])) : ?>
-            <span>Welcome: <?php echo $_SESSION["username"]; ?></span>
-            <a href="settings.php" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded inline-block">Settings</a>
-            <a href="index.php?logout='1'" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded inline-block">Logout</a>
-          <?php else : ?>
-            <a href="login.php" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded inline-block">Login</a>
-            <a href="register.php" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded inline-block">Register</a>
-          <?php endif ?>
+          <div class="col-auto">
+            <a href="./" class="brand">
+              <img src="images/logo.png" alt="<?php echo $siteTitle; ?>">
+            </a>
+          </div>
+          
+          <div class="col">
+            <ul class="list_left">
+              <li><a href="index.php">New ticket</a></li>
+              <li><a href="index.php">Open tickets</a></li>
+            </ul>
+          </div>
+
+          <div class="col-auto">
+            <?php 
+            if (isset($_SESSION["username"])) : ?>
+              <ul class="list_right">
+                <li><a href="profile.php" class="">Profile</a></li>
+                <li><a href="settings.php" class="">Settings</a></li>
+                <li><a href="index.php?logout='1'" class="">Logout</a></li>
+              </ul>
+              <div class="text-right">Hello <?php echo $_SESSION["username"]; ?>!</div>
+            <?php else : ?>
+              <ul class="list_right">
+                <li><a href="register.php" class="">Register</a></li>
+                <li><a href="login.php" class="">Login</a></li>
+              </ul>
+            <?php endif ?>
+          </div>
+
         </div>
 
       </div>

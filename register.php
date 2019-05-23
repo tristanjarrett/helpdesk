@@ -3,36 +3,41 @@
  	include 'header.php';
 ?>
 
-		<main>
+		<main class="register_page">
 
-			<div class="container mx-auto">
+			<div class="container">
+
+				<h1 class="h3"><?php echo $pageTitle; ?></h1>
+				<hr>
 
 				<form action="register.php" method="POST">
+
 					<?php include('inc/error.php'); ?>
 
-					<div>
+					<div class="form-group">
 						<label>Username</label>
-						<input type="text" name="username" placeholder="Username" value="<?php echo $username; ?>">
+						<input class="form-control" type="text" name="username" placeholder="Username" value="<?php echo $username; ?>">
 					</div>
 
-					<div>
+					<div class="form-group">
 						<label>Email</label>
-						<input type="email" name="email" placeholder="Email" value="<?php echo $email; ?>">
+						<input class="form-control" type="email" name="email" placeholder="Email" value="<?php echo $email; ?>">
 					</div>
 
-					<div>
+					<div class="form-group">
 						<label>Password</label>
-						<input type="password" placeholder="Password" name="password">
+						<input class="form-control" type="password" placeholder="Password" name="password">
 					</div>
 
-					<div>
+					<div class="form-group">
 						<label>Verify Password</label>
-						<input type="password" placeholder="Verify Password" name="password_verify">
+						<input class="form-control" type="password" placeholder="Verify Password" name="password_verify">
 					</div>
 
-					<div>
-						<button type="submit" name="reg_user">Create new</button>
+					<div class="text-right">
+						<button class="btn btn-primary" type="submit" name="register_user">Register</button>
 					</div>
+
 				</form>
 
 			</div>

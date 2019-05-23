@@ -13,42 +13,54 @@
 
 		<main>
 
-		<div class="container mx-auto">
+			<div class="container">
 
-			<h1><?php echo $pageTitle; ?></h1>
-			<table>
+				<h1 class="h3"><?php echo $pageTitle; ?></h1>
+				<hr>
 
-				<tr>
-					<th>ID</th>
-					<th>Username</th>
-					<th>Email</th>
-				</tr>
+				<h2 class="h4">Users</h2>
 
-				<?php 
+				<table class="table table-bordered table-striped">
 
-				if ($db-> connect_error) {
-					die("Connection failed:" . $db-> connect_error);
-				}
+					<thead>
+						<tr>
+							<th>ID</th>
+							<th>Username</th>
+							<th>Email</th>
+							<th>Options</th>
+						</tr>
+					</thead>
 
-				$users_sql = "SELECT username, email, id from users";
-				$result_sql = $db-> query($users_sql);
+					<tbody>
 
-				if ($result_sql-> num_rows > 0) {
-					while ($row_sql = $result_sql-> fetch_assoc()) {
-						echo "<tr>";
-						echo "<td>" . $row_sql["id"] . "</td>";
-						echo "<td>" . $row_sql["username"] . "</td>";
-						echo "<td>" . $row_sql["email"] . "</td>";
-						echo "</tr>";
+					<?php 
+
+					if ($db-> connect_error) {
+						die("Connection failed:" . $db->connect_error);
 					}
-				} else {
-					echo "0";
-				}
-				
-				?>
-			</table>
 
-		</div>
+					$users_sql = "SELECT username, email, id from users";
+					$result_sql = $db-> query($users_sql);
+
+					if ($result_sql-> num_rows > 0) {
+						while ($row_sql = $result_sql->fetch_assoc()) {
+							echo "<tr>";
+							echo "<td>" . $row_sql["id"] . "</td>";
+							echo "<td>" . $row_sql["username"] . "</td>";
+							echo "<td>" . $row_sql["email"] . "</td>";
+							echo "<td>" . $row_sql["email"] . "</td>";
+							echo "</tr>";
+						}
+					} else {
+						echo "0";
+					}
+					
+					?>
+
+					</tbody>
+				</table>
+
+			</div>
 
 		</main>
 
