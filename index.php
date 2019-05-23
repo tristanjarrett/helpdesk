@@ -11,7 +11,9 @@
   include 'header.php';
 ?>
 
-    <main class="container">
+    <main>
+
+			<div class="container mx-auto">
 
         <!-- logged in user information -->
     		<?php if (isset($_SESSION['username'])) : ?>
@@ -32,6 +34,7 @@
             <select name="type" value="<?php echo $type; ?>">
               <option selected disabled>Please select</option>
               <option value="support">Support Request</option>
+              <option value="project">Project</option>
             </select>
 					</div>
 
@@ -39,10 +42,9 @@
 						<label>Priority</label>
             <select name="priority" value="<?php echo $priority; ?>">
               <option selected disabled>Please select</option>
-              <option value="1">1</option>
-              <option value="2">2</option>
-              <option value="3">3</option>
-              <option value="4">4</option>
+              <option value="low">Low</option>
+              <option value="medium">Medium</option>
+              <option value="high">High</option>
             </select>
 					</div>
 
@@ -62,6 +64,8 @@
 				</form>
 
     		<?php endif ?>
+
+			</div>
 
     </main>
 

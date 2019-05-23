@@ -39,13 +39,14 @@
 			mysqli_query($db, $query);
 
 			$_SESSION['username'] = $username;
+			$_SESSION['email'] = $email;
 			$_SESSION['success'] = "You are now logged in";
 			header('location: index.php');
 		}
 
 	}
 
-	// LOGIN USER
+	// login user
 	if (isset($_POST['login_user'])) {
 		$username = mysqli_real_escape_string($db, $_POST['username']);
 		$password = mysqli_real_escape_string($db, $_POST['password']);
@@ -67,7 +68,7 @@
 				$_SESSION['success'] = "You are now logged in";
 				header('location: ./');
 			}else {
-				array_push($errors, "Incorrect Username/Password");
+				array_push($errors, "Incorrect Username or Password");
 			}
 		}
 	}

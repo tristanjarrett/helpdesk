@@ -1,5 +1,13 @@
 <?php
-	$pageTitle = 'Users';
+	if(!isset($_SESSION)) {
+  	session_start();
+  }
+
+	if (!isset($_SESSION['username'])) {
+		header("location: login.php");
+	}
+
+	$pageTitle = 'Settings';
  	include 'header.php';
 ?>
 
@@ -7,6 +15,7 @@
 
 		<div class="container mx-auto">
 
+			<h1><?php echo $pageTitle; ?></h1>
 			<table>
 
 				<tr>

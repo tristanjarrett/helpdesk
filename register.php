@@ -3,7 +3,9 @@
  	include 'header.php';
 ?>
 
-		<main class="container">
+		<main>
+
+			<div class="container mx-auto">
 
 				<form action="register.php" method="POST">
 					<?php include('inc/error.php'); ?>
@@ -33,6 +35,8 @@
 					</div>
 				</form>
 
+			</div>
+			
 		</main>
 
 <?php include 'footer.php'; ?>

@@ -39,6 +39,7 @@
           <?php 
           if (isset($_SESSION["username"])) : ?>
             <span>Welcome: <?php echo $_SESSION["username"]; ?></span>
+            <a href="settings.php" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded inline-block">Settings</a>
             <a href="index.php?logout='1'" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded inline-block">Logout</a>
           <?php else : ?>
             <a href="login.php" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded inline-block">Login</a>
