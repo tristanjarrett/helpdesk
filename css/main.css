@@ -17,3 +17,18 @@
   left: 0;
   right: 0;
 }
+
+table {
+  width: 100%;
+}
+th {
+  background-color: #999999;
+  color: #ffffff;
+  text-align: left;
+}
+th, td {
+  padding: .5rem !important;
+}
+tr:nth-child(odd) {
+  background-color: #f7f7f7;
+}
