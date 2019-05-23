@@ -18,8 +18,6 @@
 				<h1 class="h3"><?php echo $pageTitle; ?></h1>
 				<hr>
 
-				<h2 class="h4">Users</h2>
-
 				<table class="table table-bordered table-striped">
 
 					<thead>
