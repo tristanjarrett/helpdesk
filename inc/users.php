@@ -74,8 +74,21 @@
 			$query = "INSERT INTO users (username, email, password) VALUES('$username', '$email', '$password')";
 			mysqli_query($db, $query);
 			$_SESSION['username'] = $username;
-			$_SESSION['success'] = '<div class="alert alert-success">Registration was successfull</div>';
+			$_SESSION['success'] = '<div class="alert alert-success">
+			<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+			<span aria-hidden="true">&times;</span>
+			</button>
+			<span>Registration was successful
+			</span>
+			</div>';
 			header('location: ./');
+		} else {
+			$_SESSION['error'] = '<div class="alert alert-danger">
+			<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+			<span aria-hidden="true">&times;</span>
+			</button>
+			<span>Something went wrong</span>
+			</div>';
 		} 
 	}
 

@@ -28,36 +28,36 @@
     <header class="header">
       <div class="container-fluid">
 
-        <div class="row d-flex align-items-center">
+        <div class="d-flex justify-content-between align-items-center">
 
-          <div class="col-auto">
+          <span class="d-flex align-items-center">
             <a href="./" class="brand">
               <img src="images/logo.png" alt="<?php echo $siteTitle; ?>">
             </a>
-          </div>
           
-          <div class="col">
-            <ul class="list_left">
-              <li><a href="./">Dashboard</a></li>
-              <li><a href="new-ticket.php">New ticket</a></li>
-            </ul>
-          </div>
+            <?php if (isset($_SESSION["username"])) : ?>
+            <span>
+              <a href="./">Dashboard</a>
+              <a href="new-ticket.php">New ticket</a>
+            </span>
+            <?php else : ?>
+
+            <?php endif ?>
+          </span>
           
-          <div class="col-auto">
             <?php 
             if (isset($_SESSION["username"])) : ?>
-              <div class="text-right">Hello <?php echo $_SESSION["username"]; ?>!</div>
-              <ul class="list_right">
-                <li><a href="settings.php">Settings</a></li>
-                <li><a href="index.php?logout='1'">Logout</a></li>
-              </ul>
+              <span>
+                <?php echo "[" . $_SESSION["username"] . "]"; ?>
+                <a href="settings.php">Settings</a>
+                <a href="index.php?logout">Logout</a>
+              </span>
             <?php else : ?>
-              <ul class="list_right">
-                <li><a href="register.php">Register</a></li>
-                <li><a href="login.php">Login</a></li>
-              </ul>
+              <span>
+                <a href="register.php">Register</a>
+                <a href="login.php">Login</a>
+              </span>
             <?php endif ?>
-          </div>
 
         </div>
 
