@@ -76,22 +76,22 @@
 
 										<div class="form-group">
 											<label>Username</label>
-											<input class="form-control" type="text" name="username" placeholder="Username" value="<?php echo $username; ?>" required>
+											<input class="form-control" type="text" name="username" placeholder="Username" value="<?php echo $username; ?>">
 										</div>
 
 										<div class="form-group">
 											<label>Email</label>
-											<input class="form-control" type="email" name="email" placeholder="Email" value="<?php echo $email; ?>" required>
+											<input class="form-control" type="email" name="email" placeholder="Email" value="<?php echo $email; ?>">
 										</div>
 
 										<div class="form-group">
 											<label>Password</label>
-											<input class="form-control" type="password" placeholder="Password" name="password" required>
+											<input class="form-control" type="password" placeholder="Password" name="password">
 										</div>
 
 										<div class="form-group">
 											<label>Verify Password</label>
-											<input class="form-control" type="password" placeholder="Verify Password" name="password_verify" required>
+											<input class="form-control" type="password" placeholder="Verify Password" name="password_verify">
 										</div>
 
 										<div class="text-right">

@@ -20,37 +20,37 @@
 					<h1 class="h3"><?php echo $pageTitle; ?></h1>
 					<hr>
 
-					<form action="new-ticket.php" method="POST">
+					<form action="" method="POST">
 
 						<?php include('inc/errors.php'); ?>
 
 						<div class="form-group">
 							<label>Call type</label>
-							<select class="form-control" name="type" value="<?php echo $type; ?>" required>
+							<select class="form-control" name="type">
 								<option selected disabled>Please select</option>
-								<option value="support">Support Request</option>
-								<option value="project">Project</option>
+								<option value="Support">Support</option>
+								<option value="Project">Project</option>
 							</select>
 						</div>
 
 						<div class="form-group">
 							<label>Priority</label>
-							<select class="form-control" name="priority" value="<?php echo $priority; ?>" required>
+							<select class="form-control" name="priority">
 								<option selected disabled>Please select</option>
-								<option value="low">Low</option>
-								<option value="medium">Medium</option>
-								<option value="high">High</option>
+								<option value="Low">Low</option>
+								<option value="Medium">Medium</option>
+								<option value="High">High</option>
 							</select>
 						</div>
 
 						<div class="form-group">
 							<label>Summary</label>
-							<input class="form-control" type="text" name="summary" placeholder="Summary" value="<?php echo $summary; ?>" required>
+							<input class="form-control" type="text" name="summary" placeholder="Summary">
 						</div>
 
 						<div class="form-group">
 							<label>Description</label>
-							<textarea class="form-control" name="description" rows="10" placeholder="Detail your request" required><?php echo $description; ?></textarea>
+							<textarea class="form-control" name="description" rows="10" placeholder="Detail your request"></textarea>
 						</div>
 
 						<div class="text-right">

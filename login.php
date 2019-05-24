@@ -12,7 +12,7 @@
 					<h1 class="h3"><?php echo $pageTitle; ?></h1>
 					<hr>
 
-					<form action="login.php" method="POST">
+					<form action="" method="POST">
 					
 						<?php include('inc/errors.php'); ?>
 

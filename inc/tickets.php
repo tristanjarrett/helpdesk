@@ -1,15 +1,6 @@
-<?php 
-
-	// start session if not running
-	if(!isset($_SESSION)) {
-  	session_start();
-  }
+<?php
 
   // variable declaration
-	$type = "";
-	$priority = "";
-	$summary = "";
-	$description = "";
 	$errors = array();
 
 	// connect database
@@ -25,11 +16,19 @@
 		$summary = mysqli_real_escape_string($db, $_POST['summary']);
 		$description = mysqli_real_escape_string($db, $_POST['description']);
 
-		// form validation: ensure that the form is correctly filled
-		if (empty($type)) { array_push($errors, "Call type is required"); }
-		if (empty($priority)) { array_push($errors, "Priority is required"); }
-		if (empty($summary)) { array_push($errors, "Summary is required"); }
-		if (empty($description)) { array_push($errors, "Description is required"); }
+		// ensure that the form is correctly filled
+		if (empty($type)) { 
+			array_push($errors, "Call type is required"); 
+		}
+		if (empty($priority)) { 
+			array_push($errors, "Priority is required"); 
+		}
+		if (empty($summary)) { 
+			array_push($errors, "Summary is required"); 
+		}
+		if (empty($description)) { 
+			array_push($errors, "Description is required"); 
+		}
 
 		// create ticket if there are no errors in the form
 		if (count($errors) == 0) {

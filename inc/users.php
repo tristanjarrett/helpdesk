@@ -107,8 +107,18 @@
 			$password = md5($password);
 			$query = "INSERT INTO users (username, email, password) VALUES('$username', '$email', '$password')";
 			mysqli_query($db, $query);
-			$_SESSION['success'] = '<div class="alert alert-success">New user created successfully</div>';
+			$_SESSION['success'] = '<div class="alert alert-success">
+			<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+			<span aria-hidden="true">&times;</span>
+			</button>
+			<span>New user created successfully</span>
+			</div>';
 		} else {
-			$_SESSION['error'] = '<div class="alert alert-danger">User not created</div>';
+			$_SESSION['error'] = '<div class="alert alert-danger">
+			<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+			<span aria-hidden="true">&times;</span>
+			</button>
+			<span>Something went wrong</span>
+			</div>';
 		}
 	}
