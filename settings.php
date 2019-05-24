@@ -41,6 +41,8 @@
 									<table class="table table-bordered table-striped">
 										<thead>
 											<tr>
+												<th>Name</th>
+												<th>Surname</th>
 												<th>Username</th>
 												<th>Email</th>
 											</tr>
@@ -50,11 +52,13 @@
 										if ($db-> connect_error) {
 											die("Connection failed:" . $db->connect_error);
 										}
-										$users_sql = "SELECT username, email, id from users";
+										$users_sql = "SELECT fname, lname, username, email, id from users";
 										$result_sql = $db-> query($users_sql);
 										if ($result_sql-> num_rows > 0) {
 											while ($row_sql = $result_sql->fetch_assoc()) {
 												echo "<tr>";
+												echo "<td>" . $row_sql["fname"] . "</td>";
+												echo "<td>" . $row_sql["lname"] . "</td>";
 												echo "<td>" . $row_sql["username"] . "</td>";
 												echo "<td>" . $row_sql["email"] . "</td>";
 												echo "</tr>";
@@ -77,6 +81,16 @@
 										<div class="form-group">
 											<label>Username</label>
 											<input class="form-control" type="text" name="username" placeholder="Username" value="<?php echo $username; ?>">
+										</div>
+
+										<div class="form-group">
+											<label for="fname">First name</label>
+											<input class="form-control" type="text" name="fname" id="fname" placeholder="First name">
+										</div>
+
+										<div class="form-group">
+											<label for="lname">Last name</label>
+											<input class="form-control" type="text" name="lname" id="lname" placeholder="Last name">
 										</div>
 
 										<div class="form-group">

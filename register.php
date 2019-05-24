@@ -25,6 +25,16 @@
 						</div>
 
 						<div class="form-group">
+							<label for="fname">First name</label>
+							<input class="form-control" type="text" name="fname" id="fname" placeholder="First name">
+						</div>
+
+						<div class="form-group">
+							<label for="lname">Last name</label>
+							<input class="form-control" type="text" name="lname" id="lname" placeholder="Last name">
+						</div>
+
+						<div class="form-group">
 							<label for="email">Email</label>
 							<input class="form-control" type="email" name="email" id="email" placeholder="Email">
 						</div>

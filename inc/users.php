@@ -50,6 +50,8 @@
 	 */ 
 	if (isset($_POST['register_user'])) {
 		$username = mysqli_real_escape_string($db, $_POST['username']);
+		$fname = mysqli_real_escape_string($db, $_POST['fname']);
+		$lname = mysqli_real_escape_string($db, $_POST['lname']);
 		$email = mysqli_real_escape_string($db, $_POST['email']);
 		$password = mysqli_real_escape_string($db, $_POST['password']);
 		$password_verify = mysqli_real_escape_string($db, $_POST['password_verify']);
@@ -71,7 +73,7 @@
 		// register user if there are no errors in the form
 		if (count($errors) == 0) {
 			$password = md5($password);
-			$query = "INSERT INTO users (username, email, password) VALUES('$username', '$email', '$password')";
+			$query = "INSERT INTO users (username, fname, lname, email, password) VALUES('$username', '$fname', '$lname', '$email', '$password')";
 			mysqli_query($db, $query);
 			$_SESSION['username'] = $username;
 			$_SESSION['success'] = '<div class="alert alert-success">
@@ -97,6 +99,8 @@
 	 */ 
 	if (isset($_POST['create_user'])) {
 		$username = mysqli_real_escape_string($db, $_POST['username']);
+		$fname = mysqli_real_escape_string($db, $_POST['fname']);
+		$lname = mysqli_real_escape_string($db, $_POST['lname']);
 		$email = mysqli_real_escape_string($db, $_POST['email']);
 		$password = mysqli_real_escape_string($db, $_POST['password']);
 		$password_verify = mysqli_real_escape_string($db, $_POST['password_verify']);
@@ -118,7 +122,7 @@
 		// create user if there are no errors in the form
 		if (count($errors) == 0) {
 			$password = md5($password);
-			$query = "INSERT INTO users (username, email, password) VALUES('$username', '$email', '$password')";
+			$query = "INSERT INTO users (username, fname, lname, email, password) VALUES('$username', '$fname', '$lname', '$email', '$password')";
 			mysqli_query($db, $query);
 			$_SESSION['success'] = '<div class="alert alert-success">
 			<button type="button" class="close" data-dismiss="alert" aria-label="Close">
