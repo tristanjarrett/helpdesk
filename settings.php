@@ -70,7 +70,7 @@
 								<div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
 
 									<h2 class="h4 mb-4">Create user</h2>
-									<form action="" method="POST">
+									<form action="settings.php" method="POST">
 
 										<?php include('inc/errors.php'); ?>
 
