@@ -7,7 +7,7 @@
 		header("location: login.php");
 	}
 
-	$pageTitle = 'Tickets';
+	$pageTitle = 'Dashboard';
  	include 'header.php';
 ?>
 

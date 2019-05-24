@@ -48,7 +48,7 @@
             <?php 
             if (isset($_SESSION["username"])) : ?>
               <span>
-                <?php echo "[" . $_SESSION["username"] . "]"; ?>
+                <?php echo $_SESSION["username"]; ?>
                 <a href="settings.php">Settings</a>
                 <a href="index.php?logout">Logout</a>
               </span>
