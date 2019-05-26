@@ -28,6 +28,7 @@
 								<th>ID</th>
 								<th>Call type</th>
 								<th>Priority</th>
+								<th>Date</th>
 							</tr>
 						</thead>
 
@@ -39,7 +40,7 @@
 							die("Connection failed:" . $db->connect_error);
 						}
 
-						$tickets_sql = "SELECT id, type, priority, summary from tickets";
+						$tickets_sql = "SELECT id, type, priority, summary, timestamp from tickets";
 						$result_sql = $db-> query($tickets_sql);
 
 						if ($result_sql-> num_rows > 0) {
@@ -49,6 +50,7 @@
 								echo "<td>" . "#" . $row_sql["id"] . "</td>";
 								echo "<td>" . $row_sql["type"] . "</td>";
 								echo "<td>" . $row_sql["priority"] . "</td>";
+								echo "<td>" . $row_sql["timestamp"] . "</td>";
 								echo "</tr>";
 							}
 						} else {

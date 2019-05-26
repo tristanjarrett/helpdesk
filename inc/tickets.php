@@ -2,6 +2,7 @@
 
   // variable declaration
 	$errors = array();
+	$timestamp = date('d/m/Y');
 
 	// connect database
 	require_once 'config/database.php';
@@ -32,7 +33,7 @@
 
 		// create ticket if there are no errors in the form
 		if (count($errors) == 0) {
-			$query = "INSERT INTO tickets (type, priority, summary, description) VALUES('$type', '$priority', '$summary', '$description')";
+			$query = "INSERT INTO tickets (type, priority, timestamp, summary, description) VALUES('$type', '$priority', '$timestamp', '$summary', '$description')";
 			mysqli_query($db, $query);
 			header('location: ./');
 		}
