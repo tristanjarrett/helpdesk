@@ -83,14 +83,16 @@
 											<input class="form-control" type="text" name="username" placeholder="Username" value="<?php echo $username; ?>">
 										</div>
 
-										<div class="form-group">
-											<label for="fname">First name</label>
-											<input class="form-control" type="text" name="fname" id="fname" placeholder="First name">
-										</div>
+										<div class="form-row">
+											<div class="col">
+												<label for="fname">First name</label>
+												<input class="form-control" type="text" name="fname" id="fname" placeholder="First name">
+											</div>
 
-										<div class="form-group">
-											<label for="lname">Last name</label>
-											<input class="form-control" type="text" name="lname" id="lname" placeholder="Last name">
+											<div class="col">
+												<label for="lname">Last name</label>
+												<input class="form-control" type="text" name="lname" id="lname" placeholder="Last name">
+											</div>
 										</div>
 
 										<div class="form-group">
