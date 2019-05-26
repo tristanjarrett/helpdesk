@@ -47,7 +47,7 @@
 							while ($row_sql = $result_sql->fetch_assoc()) {
 								echo "<tr>";
 								echo "<td>" . $row_sql["summary"] . "</td>";
-								echo "<td>" . "#" . $row_sql["id"] . "</td>";
+								echo "<td>" . $row_sql["id"] . "</td>";
 								echo "<td>" . $row_sql["type"] . "</td>";
 								echo "<td>" . $row_sql["priority"] . "</td>";
 								echo "<td>" . $row_sql["timestamp"] . "</td>";
