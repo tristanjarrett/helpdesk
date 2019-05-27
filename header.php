@@ -34,7 +34,7 @@
             <a href="./" class="brand">
               <img src="images/logo.png" alt="<?php echo $siteTitle; ?>">
             </a>
-          
+
             <?php if (isset($_SESSION["username"])) : ?>
             <span>
               <a href="./">Dashboard</a>
@@ -44,12 +44,15 @@
 
             <?php endif ?>
           </span>
-          
-            <?php 
+
+            <?php
             if (isset($_SESSION["username"])) : ?>
               <span>
                 <?php echo $_SESSION["username"]; ?>
-                <a href="settings.php">Settings</a>
+                  <?php if ($_SESSION['username'] == 'tristan') : ?>
+                    <a href="settings.php">Settings</a>
+                  <?php else : ?>
+                  <?php endif ?>
                 <a href="index.php?logout">Logout</a>
               </span>
             <?php else : ?>

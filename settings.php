@@ -11,6 +11,8 @@
  	include 'header.php';
 ?>
 
+
+	<?php if ($_SESSION['username'] == 'tristan') : ?>
 		<main>
 
 			<div class="container">
@@ -36,7 +38,7 @@
 							<div class="tab-content" id="v-pills-tabContent">
 
 								<div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
-								
+
 									<h2 class="h4 mb-4">Users</h2>
 									<table class="table table-bordered table-striped">
 										<thead>
@@ -45,14 +47,15 @@
 												<th>Surname</th>
 												<th>Username</th>
 												<th>Email</th>
+												<th>User Level</th>
 											</tr>
 										</thead>
 										<tbody>
-										<?php 
+										<?php
 										if ($db-> connect_error) {
 											die("Connection failed:" . $db->connect_error);
 										}
-										$users_sql = "SELECT fname, lname, username, email, id from users";
+										$users_sql = "SELECT fname, lname, username, email, user_perm from users";
 										$result_sql = $db-> query($users_sql);
 										if ($result_sql-> num_rows > 0) {
 											while ($row_sql = $result_sql->fetch_assoc()) {
@@ -61,10 +64,11 @@
 												echo "<td>" . $row_sql["lname"] . "</td>";
 												echo "<td>" . $row_sql["username"] . "</td>";
 												echo "<td>" . $row_sql["email"] . "</td>";
+												echo "<td>" . $row_sql["user_perm"] . "</td>";
 												echo "</tr>";
 											}
 										} else {
-											
+
 										}
 										?>
 										</tbody>
@@ -79,8 +83,16 @@
 										<?php include('inc/errors.php'); ?>
 
 										<div class="form-group">
+											<label>User level</label>
+											<select class="form-control" type="text" name="user_perm">
+												<option value="user" selected>User</option>
+												<option value="admin">Admin</option>
+											</select>
+										</div>
+
+										<div class="form-group">
 											<label>Username</label>
-											<input class="form-control" type="text" name="username" placeholder="Username" value="<?php echo $username; ?>">
+											<input class="form-control" type="text" name="username" placeholder="Username">
 										</div>
 
 										<div class="form-row">
@@ -97,7 +109,7 @@
 
 										<div class="form-group">
 											<label>Email</label>
-											<input class="form-control" type="email" name="email" placeholder="Email" value="<?php echo $email; ?>">
+											<input class="form-control" type="email" name="email" placeholder="Email">
 										</div>
 
 										<div class="form-group">
@@ -127,5 +139,15 @@
 			</div>
 
 		</main>
+
+	<?php else : ?>
+		<main>
+			<div class="container">
+				<div class="global_panel">
+					Access denied, please log in with admin
+				</div>
+			</div>
+		</main>
+	<?php endif ?>
 
 <?php include 'footer.php'; ?>
