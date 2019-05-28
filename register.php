@@ -12,9 +12,6 @@
 
 				<div class="global_panel">
 
-					<?php echo $_SESSION['success']; ?>
-					<?php echo $_SESSION['error']; ?>
-
 					<h1 class="h3"><?php echo $pageTitle; ?></h1>
 					<hr>
 
