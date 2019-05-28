@@ -8,6 +8,8 @@
 		header("location: login.php");
 	}
 
+	include 'inc/tickets/create.php';
+
   $pageTitle = 'New ticket';
   include 'header.php';
 ?>

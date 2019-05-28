@@ -10,7 +10,6 @@
 	}
 
   include 'inc/auth.php';
-  include 'inc/tickets.php';
 
   $siteTitle = 'Helpdesk';
 ?>

@@ -10,7 +10,7 @@
 	$timestamp = date('d/m/Y');
 
 	// connect database
-	require_once 'config/database.php';
+	require_once './inc/config/database.php';
 
 	/**
 	 * create new ticket
