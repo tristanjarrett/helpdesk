@@ -9,7 +9,7 @@
 	$errors = array();
 
 	// connect database
-	require_once './inc/config/database.php';
+	require './inc/config/database.php';
 
 	/**
 	 * register new user

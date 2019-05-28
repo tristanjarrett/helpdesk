@@ -11,7 +11,7 @@
 	$_SESSION['error'] = "";
 
 	// connect database
-	require_once './inc/config/database.php';
+	require './inc/config/database.php';
 
 	/**
 	 * create new user
