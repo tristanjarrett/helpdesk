@@ -3,7 +3,7 @@
 	// start session if not running
 	if(!isset($_SESSION)) {
   	session_start();
-  }
+	}
 
 	// variable declaration
 	$errors = array();
