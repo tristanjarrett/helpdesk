@@ -1,4 +1,5 @@
 <?php
+
 	$pageTitle = 'Register';
  	include 'header.php';
 ?>
