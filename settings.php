@@ -57,7 +57,7 @@
 											if ($db-> connect_error) {
 												die("Connection failed:" . $db->connect_error);
 											}
-											$users_sql = "SELECT fname, lname, username, email, user_perm from users";
+											$users_sql = "SELECT * from users";
 											$result_sql = $db-> query($users_sql);
 											if ($result_sql-> num_rows > 0) {
 												while ($row_sql = $result_sql->fetch_assoc()) {

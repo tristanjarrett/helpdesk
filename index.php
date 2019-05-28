@@ -42,7 +42,7 @@
 								die("Connection failed:" . $db->connect_error);
 							}
 
-							$tickets_sql = "SELECT id, type, priority, summary, timestamp from tickets";
+							$tickets_sql = "SELECT * from tickets";
 							$result_sql = $db-> query($tickets_sql);
 
 							if ($result_sql-> num_rows > 0) {
@@ -54,9 +54,9 @@
 									echo "<td>" . $row_sql["priority"] . "</td>";
 									echo "<td>" . $row_sql["timestamp"] . "</td>";
 									echo "</tr>";
-								}
+								} 
 							} else {
-								echo "There are curently no tickets";
+								
 							}
 							
 							?>
