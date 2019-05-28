@@ -7,8 +7,6 @@
 
 	// variable declaration
 	$errors = array();
-	$_SESSION['success'] = "";
-	$_SESSION['error'] = "";
 
 	// connect database
 	require_once './inc/config/database.php';
@@ -34,7 +32,6 @@
 		if (empty($password)) {
 			array_push($errors, "Password is required");
 		}
-
 		if ($password != $password_verify) {
 			array_push($errors, "The two passwords do not match");
 		}
@@ -45,20 +42,6 @@
 			$query = "INSERT INTO users (username, fname, lname, email, password, user_perm) VALUES('$username', '$fname', '$lname', '$email', '$password', '$user_perm')";
 			mysqli_query($db, $query);
 			$_SESSION['username'] = $username;
-			$_SESSION['success'] = '<div class="alert alert-success">
-			<button type="button" class="close" data-dismiss="alert" aria-label="Close">
-			<span aria-hidden="true">&times;</span>
-			</button>
-			<span>Registration was successful
-			</span>
-			</div>';
 			header('location: ./');
-		} else {
-			$_SESSION['error'] = '<div class="alert alert-danger">
-			<button type="button" class="close" data-dismiss="alert" aria-label="Close">
-			<span aria-hidden="true">&times;</span>
-			</button>
-			<span>Something went wrong</span>
-			</div>';
-		}
+		} 
 	}
