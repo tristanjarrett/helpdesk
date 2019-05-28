@@ -35,6 +35,7 @@
 				$_SESSION['username'] = $username;
 				header('location: ./');
 			} else {
+				// error if no details match
 				array_push($errors, "Incorrect Username or Password");
 			}
 		}
