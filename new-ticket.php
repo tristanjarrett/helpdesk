@@ -28,8 +28,7 @@
 						<div class="form-group">
 							<label>Call type</label>
 							<select class="form-control" name="type">
-								<option selected disabled>Please select</option>
-								<option value="Support">Support</option>
+								<option value="Support" selected>Support</option>
 								<option value="Project">Project</option>
 							</select>
 						</div>
@@ -37,8 +36,7 @@
 						<div class="form-group">
 							<label>Priority</label>
 							<select class="form-control" name="priority">
-								<option selected disabled>Please select</option>
-								<option value="Low">Low</option>
+								<option value="Low" selected>Low</option>
 								<option value="Medium">Medium</option>
 								<option value="High">High</option>
 							</select>

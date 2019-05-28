@@ -7,8 +7,6 @@
 
 	// variable declaration
 	$errors = array();
-	$_SESSION['success'] = "";
-	$_SESSION['error'] = "";
 
 	// connect database
 	require_once 'config/database.php';
