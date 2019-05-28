@@ -20,47 +20,49 @@
 					<h1 class="h3"><?php echo $pageTitle; ?></h1>
 					<hr>
 
-					<table class="table table-bordered table-striped">
+					<div class="table-responsive">
+						<table class="table table-bordered table-striped">
 
-						<thead>
-							<tr>
-								<th>Summary</th>
-								<th>ID</th>
-								<th>Call type</th>
-								<th>Priority</th>
-								<th>Date</th>
-							</tr>
-						</thead>
+							<thead>
+								<tr>
+									<th>Summary</th>
+									<th>ID</th>
+									<th>Call type</th>
+									<th>Priority</th>
+									<th>Date</th>
+								</tr>
+							</thead>
 
-						<tbody>
+							<tbody>
 
-						<?php 
+							<?php 
 
-						if ($db->connect_error) {
-							die("Connection failed:" . $db->connect_error);
-						}
-
-						$tickets_sql = "SELECT id, type, priority, summary, timestamp from tickets";
-						$result_sql = $db-> query($tickets_sql);
-
-						if ($result_sql-> num_rows > 0) {
-							while ($row_sql = $result_sql->fetch_assoc()) {
-								echo "<tr>";
-								echo "<td>" . $row_sql["summary"] . "</td>";
-								echo "<td>" . $row_sql["id"] . "</td>";
-								echo "<td>" . $row_sql["type"] . "</td>";
-								echo "<td>" . $row_sql["priority"] . "</td>";
-								echo "<td>" . $row_sql["timestamp"] . "</td>";
-								echo "</tr>";
+							if ($db->connect_error) {
+								die("Connection failed:" . $db->connect_error);
 							}
-						} else {
-							echo "There are curently no tickets";
-						}
-						
-						?>
 
-						</tbody>
-					</table>
+							$tickets_sql = "SELECT id, type, priority, summary, timestamp from tickets";
+							$result_sql = $db-> query($tickets_sql);
+
+							if ($result_sql-> num_rows > 0) {
+								while ($row_sql = $result_sql->fetch_assoc()) {
+									echo "<tr>";
+									echo "<td>" . $row_sql["summary"] . "</td>";
+									echo "<td>" . $row_sql["id"] . "</td>";
+									echo "<td>" . $row_sql["type"] . "</td>";
+									echo "<td>" . $row_sql["priority"] . "</td>";
+									echo "<td>" . $row_sql["timestamp"] . "</td>";
+									echo "</tr>";
+								}
+							} else {
+								echo "There are curently no tickets";
+							}
+							
+							?>
+
+							</tbody>
+						</table>
+					</div>
 
 				</div>
 

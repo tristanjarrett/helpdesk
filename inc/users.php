@@ -6,7 +6,6 @@
   }
 
 	// variable declaration
-	$username = "";
 	$errors = array();
 	$_SESSION['success'] = "";
 	$_SESSION['error'] = "";
