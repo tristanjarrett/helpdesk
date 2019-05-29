@@ -35,7 +35,7 @@
             </a>
 
             <?php if (isset($_SESSION["username"])) : ?>
-            <span>
+            <span class="header_menu_left">
               <a href="./">Dashboard</a>
               <a href="new-ticket.php">New ticket</a>
             </span>
@@ -46,7 +46,7 @@
 
             <?php
             if (isset($_SESSION["username"])) : ?>
-              <span>
+              <span class="header_menu_right">
                 <span><?php echo $_SESSION["my_fname"] . " " . $_SESSION["my_lname"]; ?></span>
                 <a href="profile.php">Profile</a>
                   <?php if ($_SESSION['my_user_perm'] == 'admin') : ?>
@@ -56,7 +56,7 @@
                 <a href="index.php?logout">Logout</a>
               </span>
             <?php else : ?>
-              <span>
+              <span class="header_menu_right">
                 <a href="register.php">Register</a>
                 <a href="login.php">Login</a>
               </span>

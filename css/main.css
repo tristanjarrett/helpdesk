@@ -12,6 +12,14 @@ html, body {
   position: -webkit-sticky;
 }
 
+.header .header_menu_left a {
+  margin-right: .5rem;
+}
+
+.header .header_menu_right a {
+  margin-left: .5rem;
+}
+
 .brand {
   color: #666666;
   text-decoration: none !important;
