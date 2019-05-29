@@ -29,7 +29,7 @@
 
 					<ul class="nav nav-tabs mb-4" id="myTab" role="tablist">
 						<li class="nav-item">
-							<a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Home</a>
+							<a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Info</a>
 						</li>
 						<li class="nav-item">
 							<a class="nav-link" id="edit-tab" data-toggle="tab" href="#edit" role="tab" aria-controls="edit" aria-selected="false">Edit</a>
@@ -59,17 +59,17 @@
 								<?php include('inc/errors.php'); ?>
 
 								<div class="form-group">
-									<label>Email: </label>
+									<label>Email</label>
 									<input class="form-control" type="text" name="email" placeholder="Email" value="<?php echo $_SESSION['my_email']; ?>">
 								</div>
 
 								<div class="form-group">
-									<label>First Name: </label>
+									<label>First Name</label>
 									<input class="form-control" type="text" name="fname" placeholder="First Name" value="<?php echo $_SESSION['my_fname']; ?>">
 								</div>
 
 								<div class="form-group">
-									<label>Last Name: </label>
+									<label>Last Name</label>
 									<input class="form-control" type="text" name="lname" placeholder="Last Name" value="<?php echo $_SESSION['my_lname']; ?>">
 								</div>
 
@@ -82,6 +82,28 @@
 						</div>
 
 						<div class="tab-pane fade" id="password" role="tabpanel" aria-labelledby="password-tab">
+
+							<form action="" method="POST">
+
+								<?php include('inc/errors.php'); ?>
+
+								<div class="form-row form-group">
+									<div class="col-md">
+										<label>Password</label>
+										<input class="form-control" type="password" placeholder="Password" name="password">
+									</div>
+
+									<div class="col-md">
+										<label>Verify Password</label>
+										<input class="form-control" type="password" placeholder="Verify Password" name="password_verify">
+									</div>
+								</div>		
+
+								<div class="text-right">
+									<button class="btn btn-primary" type="submit" name="update_pass">Update</button>
+								</div>
+
+							</form>
 
 						</div>
 
