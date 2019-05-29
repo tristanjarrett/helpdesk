@@ -87,10 +87,15 @@
 
 								<?php include('inc/errors.php'); ?>
 
+								<div class="form-group">
+									<label>Old Password</label>
+									<input class="form-control" type="password" placeholder="Old Password" name="password_old">
+								</div>
+
 								<div class="form-row form-group">
 									<div class="col-md">
-										<label>Password</label>
-										<input class="form-control" type="password" placeholder="Password" name="password">
+										<label>New Password</label>
+										<input class="form-control" type="password" placeholder="New Password" name="password">
 									</div>
 
 									<div class="col-md">

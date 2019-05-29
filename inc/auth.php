@@ -48,6 +48,7 @@
 						$_SESSION['my_lname'] = $row_sql["lname"];
 						$_SESSION['my_email'] = $row_sql["email"];
 						$_SESSION['my_user_perm'] = $row_sql["user_perm"];
+						$_SESSION['my_password'] = $row_sql["password"];
 					} 
 				} 
 				

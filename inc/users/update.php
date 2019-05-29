@@ -71,11 +71,21 @@
 	 * edit password
 	 */
 	if (isset($_POST['update_pass'])) {
+		$password_old = mysqli_real_escape_string($db, $_POST['password_old']);
 		$password = mysqli_real_escape_string($db, $_POST['password']);
 		$password_verify = mysqli_real_escape_string($db, $_POST['password_verify']);
 
+		if (empty($password_old)) {
+			array_push($errors, "Old password is required");
+		} else {
+			$password_old = md5($password_old);
+			if ($password_old != $_SESSION['my_password']) {
+				array_push($errors, "The old password is incorrect");
+			}
+		}
+
 		if (empty($password)) {
-			array_push($errors, "Password is required");
+			array_push($errors, "New password is required");
 		}
 
 		if ($password != $password_verify) {
@@ -91,7 +101,7 @@
 			<button type="button" class="close" data-dismiss="alert" aria-label="Close">
 			<span aria-hidden="true">&times;</span>
 			</button>
-			<span>Profile updated successfully</span>
+			<span>Password updated successfully</span>
 			</div>';
 
 			// get user info from database
@@ -101,7 +111,7 @@
 			// update session data
 			if ($result_sql-> num_rows > 0) {
 				while ($row_sql = $result_sql->fetch_assoc()) {
-					$_SESSION['my_email'] = $row_sql["email"];
+					$_SESSION['my_password'] = $row_sql["password"];
 				} 
 			} 
 
