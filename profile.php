@@ -42,35 +42,35 @@
 					<div class="tab-content" id="myTabContent">
 
 						<div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-							
+
 							<ul class="list_unstyled">
 								<li>Username: <strong><?php echo $_SESSION['my_username']; ?></strong></li>
+								<li>Name: <strong><?php echo $_SESSION['my_fname']; ?></strong></li>
+								<li>Surname: <strong><?php echo $_SESSION['my_lname']; ?></strong></li>
 								<li>Email: <strong><?php echo $_SESSION['my_email']; ?></strong></li>
-								<li>First Name: <strong><?php echo $_SESSION['my_fname']; ?></strong></li>
-								<li>Last Name: <strong><?php echo $_SESSION['my_lname']; ?></strong></li>
 							</ul>
 
 						</div>
 
 						<div class="tab-pane fade" id="edit" role="tabpanel" aria-labelledby="edit-tab">
-							
+
 							<form action="" method="POST">
 
 								<?php include('inc/errors.php'); ?>
 
 								<div class="form-group">
-									<label>Email</label>
-									<input class="form-control" type="text" name="email" placeholder="Email" value="<?php echo $_SESSION['my_email']; ?>">
-								</div>
-
-								<div class="form-group">
-									<label>First Name</label>
+									<label>Name</label>
 									<input class="form-control" type="text" name="fname" placeholder="First Name" value="<?php echo $_SESSION['my_fname']; ?>">
 								</div>
 
 								<div class="form-group">
-									<label>Last Name</label>
+									<label>Surname</label>
 									<input class="form-control" type="text" name="lname" placeholder="Last Name" value="<?php echo $_SESSION['my_lname']; ?>">
+								</div>
+
+								<div class="form-group">
+									<label>Email</label>
+									<input class="form-control" type="text" name="email" placeholder="Email" value="<?php echo $_SESSION['my_email']; ?>">
 								</div>
 
 								<div class="text-right">
@@ -102,7 +102,7 @@
 										<label>Verify Password</label>
 										<input class="form-control" type="password" placeholder="Verify Password" name="password_verify">
 									</div>
-								</div>		
+								</div>
 
 								<div class="text-right">
 									<button class="btn btn-primary" type="submit" name="update_pass">Update</button>

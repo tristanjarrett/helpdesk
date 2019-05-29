@@ -10,7 +10,7 @@
 
 	$pageTitle = 'Settings';
  	include 'header.php';
-	
+
 	// new user script (after header)
 	include 'inc/users/create.php';
 ?>
@@ -173,12 +173,12 @@
 
 										<div class="form-row form-group">
 											<div class="col-md">
-												<label for="fname">First name</label>
+												<label for="fname">Name</label>
 												<input class="form-control" type="text" name="fname" id="fname" placeholder="First name">
 											</div>
 
 											<div class="col-md">
-												<label for="lname">Last name</label>
+												<label for="lname">Surname</label>
 												<input class="form-control" type="text" name="lname" id="lname" placeholder="Last name">
 											</div>
 										</div>
@@ -218,11 +218,11 @@
 
 		</main>
 
-	<?php 
+	<?php
 
-	else : 
+	else :
 		header("location: index.php");
-	endif 
+	endif
 	?>
 
 <?php include 'footer.php'; ?>
