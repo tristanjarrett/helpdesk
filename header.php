@@ -49,7 +49,7 @@
               <span>
                 <span><?php echo $_SESSION["my_fname"] . " " . $_SESSION["my_lname"]; ?></span>
                 <a href="profile.php">Profile</a>
-                  <?php if ($_SESSION['username'] == 'tristan') : ?>
+                  <?php if ($_SESSION['my_user_perm'] == 'admin') : ?>
                     <a href="settings.php">Settings</a>
                   <?php else : ?>
                   <?php endif ?>

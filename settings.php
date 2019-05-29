@@ -16,7 +16,7 @@
 ?>
 
 
-	<?php if ($_SESSION['username'] == 'tristan') : ?>
+	<?php if ($_SESSION['my_user_perm'] == 'admin') : ?>
 		<main>
 
 			<div class="container">
