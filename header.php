@@ -5,7 +5,7 @@
 
   if (isset($_GET['logout'])) {
 		session_destroy();
-		unset($_SESSION['username']);
+		unset($_SESSION['my_id']);
 		header("location: login.php");
 	}
 
@@ -34,7 +34,7 @@
               <img src="images/logo.png" alt="<?php echo $siteTitle; ?>">
             </a>
 
-            <?php if (isset($_SESSION["username"])) : ?>
+            <?php if (isset($_SESSION["my_id"])) : ?>
             <span class="header_menu_left">
               <a href="./">Dashboard</a>
               <a href="new-ticket.php">New ticket</a>
@@ -45,7 +45,7 @@
           </span>
 
             <?php
-            if (isset($_SESSION["username"])) : ?>
+            if (isset($_SESSION["my_id"])) : ?>
               <span class="header_menu_right">
                 <strong><?php echo $_SESSION["my_fname"] . " " . $_SESSION["my_lname"]; ?></strong>
                 <a href="profile.php">Profile</a>
