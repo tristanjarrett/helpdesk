@@ -1,7 +1,10 @@
 <?php
 
 	$pageTitle = 'Login';
- 	include 'header.php';
+	 include 'header.php';
+
+	// new ticket script (after header)
+	include 'inc/users/login.php';
 ?>
 
 		<main class="login_page">
