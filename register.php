@@ -1,9 +1,9 @@
 <?php
-
-	include 'inc/users/register.php';
-
 	$pageTitle = 'Register';
- 	include 'header.php';
+	include 'header.php';
+	 
+	// register script (after header)
+	include 'inc/users/register.php';
 ?>
 
 		<main class="register_page">
@@ -15,7 +15,7 @@
 					<h1 class="h3"><?php echo $pageTitle; ?></h1>
 					<hr>
 
-					<form action="register.php" method="POST">
+					<form action="" method="POST">
 
 						<?php include('inc/errors.php'); ?>
 

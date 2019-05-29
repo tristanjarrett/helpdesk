@@ -7,11 +7,12 @@
 	if (!isset($_SESSION['username'])) {
 		header("location: login.php");
 	}
-	
-  include 'inc/users/create.php';
 
 	$pageTitle = 'Settings';
  	include 'header.php';
+	
+	// new user script (after header)
+	include 'inc/users/create.php';
 ?>
 
 
