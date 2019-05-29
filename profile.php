@@ -9,7 +9,10 @@
 	}
 
 	$pageTitle = 'Profile';
- 	include 'header.php';
+	 include 'header.php';
+
+	// edit user script (after header)
+	include 'inc/users/update.php';
 ?>
 
 		<main>
@@ -29,14 +32,15 @@
 						<li>User Level: <?php echo $_SESSION['my_user_perm']; ?></li>
 					</ul>
 
+					<hr>
+
 					<form action="" method="POST">
 
-						<div class="form-group">
-							<label>Username</label>
-							<input class="form-control" type="text" name="username" placeholder="Username">
-						</div>
+						<?php include('inc/errors.php'); ?>
 
-						<div class="text-right">
+						<div class="form-inline">
+							<label class="mr-2">Email: </label>
+							<input class="form-control mr-2" type="text" name="email" placeholder="Email" value="<?php echo $_SESSION['my_email']; ?>">
 							<button class="btn btn-primary" type="submit" name="update_user">Update</button>
 						</div>
 
