@@ -10,7 +10,7 @@
 
   $pageTitle = 'Log a ticket';
 	include 'header.php';
-	
+
 	// new ticket script (after header)
 	include 'inc/tickets/create.php';
 ?>
@@ -23,6 +23,9 @@
 
 					<h1 class="h3"><?php echo $pageTitle; ?></h1>
 					<hr>
+
+					<?php echo $_SESSION['success']; ?>
+					<?php echo $_SESSION['error']; ?>
 
 					<form action="" method="POST">
 
