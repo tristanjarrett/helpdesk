@@ -9,7 +9,7 @@
 		header("location: login.php");
 	}
 
-  include 'inc/auth.php';
+  require 'config.php';
 
   $siteTitle = 'Helpdesk';
 ?>
