@@ -47,7 +47,7 @@
             <?php
             if (isset($_SESSION["username"])) : ?>
               <span>
-                <?php echo $_SESSION["username"]; ?>
+                <span><?php echo $_SESSION["my_fname"] . " " . $_SESSION["my_lname"]; ?></span>
                 <a href="profile.php">Profile</a>
                   <?php if ($_SESSION['username'] == 'tristan') : ?>
                     <a href="settings.php">Settings</a>

@@ -34,6 +34,24 @@
 			if (mysqli_num_rows($results) == 1) {
 				$_SESSION['username'] = $username;
 				header('location: ./');
+
+				// get user info from database
+				$user_sql = "SELECT * from users WHERE username = '".$_SESSION['username']."' ";
+				$result_sql = $db-> query($user_sql);
+
+				if ($result_sql-> num_rows > 0) {
+					while ($row_sql = $result_sql->fetch_assoc()) {
+						$_SESSION['my_id'] = $row_sql["id"];
+						$_SESSION['my_username'] = $row_sql["username"];
+						$_SESSION['my_fname'] = $row_sql["fname"];
+						$_SESSION['my_lname'] = $row_sql["lname"];
+						$_SESSION['my_email'] = $row_sql["email"];
+						$_SESSION['my_user_perm'] = $row_sql["user_perm"];
+					} 
+				} else {
+					
+				}
+
 			} else {
 				// error if no details match
 				array_push($errors, "Incorrect Username or Password");
