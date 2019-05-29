@@ -47,7 +47,7 @@
             <?php
             if (isset($_SESSION["username"])) : ?>
               <span class="header_menu_right">
-                <span><?php echo $_SESSION["my_fname"] . " " . $_SESSION["my_lname"]; ?></span>
+                <strong><?php echo $_SESSION["my_fname"] . " " . $_SESSION["my_lname"]; ?></strong>
                 <a href="profile.php">Profile</a>
                   <?php if ($_SESSION['my_user_perm'] == 'admin') : ?>
                     <a href="settings.php">Settings</a>

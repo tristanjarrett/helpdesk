@@ -22,14 +22,25 @@
 					<hr>
 
 					<ul>
-						<li>User ID: <?php echo $_SESSION['my_id']; ?></li>
 						<li>Username: <?php echo $_SESSION['my_username']; ?></li>
 						<li>Email: <?php echo $_SESSION['my_email']; ?></li>
 						<li>Fist Name: <?php echo $_SESSION['my_fname']; ?></li>
 						<li>Last Name: <?php echo $_SESSION['my_lname']; ?></li>
 						<li>User Level: <?php echo $_SESSION['my_user_perm']; ?></li>
 					</ul>
-					
+
+					<form action="" method="POST">
+
+						<div class="form-group">
+							<label>Username</label>
+							<input class="form-control" type="text" name="username" placeholder="Username">
+						</div>
+
+						<div class="text-right">
+							<button class="btn btn-primary" type="submit" name="update_user">Update</button>
+						</div>
+
+					</form>
 
 				</div>
 

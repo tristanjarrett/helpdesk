@@ -13,11 +13,11 @@ html, body {
 }
 
 .header .header_menu_left a {
-  margin-right: .5rem;
+  margin-right: .25rem;
 }
 
 .header .header_menu_right a {
-  margin-left: .5rem;
+  margin-left: .25rem;
 }
 
 .brand {
