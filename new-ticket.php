@@ -8,7 +8,7 @@
 		header("location: login.php");
 	}
 
-  $pageTitle = 'New ticket';
+  $pageTitle = 'Log a ticket';
 	include 'header.php';
 	
 	// new ticket script (after header)
@@ -29,7 +29,7 @@
 						<?php include('inc/errors.php'); ?>
 
 						<div class="form-group">
-							<label>Call type</label>
+							<label>Call Type</label>
 							<select class="form-control" name="type">
 								<option value="Support" selected>Support</option>
 								<option value="Project">Project</option>
