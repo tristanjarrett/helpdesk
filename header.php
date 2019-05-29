@@ -36,7 +36,11 @@
 
             <?php if (isset($_SESSION["my_id"])) : ?>
             <span class="header_menu_left">
-              <a href="./">Dashboard</a>
+              <?php if ($_SESSION['my_user_perm'] == 'admin' || $_SESSION['my_user_perm'] == 'tech' ) : 
+                echo '<a href="./">Dashboard</a>';
+              else : 
+              endif 
+              ?>
               <a href="new-ticket.php">New ticket</a>
             </span>
             <?php else : ?>
@@ -49,10 +53,11 @@
               <span class="header_menu_right">
                 <strong><?php echo $_SESSION["my_fname"] . " " . $_SESSION["my_lname"]; ?></strong>
                 <a href="profile.php">Profile</a>
-                  <?php if ($_SESSION['my_user_perm'] == 'admin') : ?>
-                    <a href="settings.php">Settings</a>
-                  <?php else : ?>
-                  <?php endif ?>
+                  <?php 
+                  if ($_SESSION['my_user_perm'] == 'admin') : 
+                    echo '<a href="settings.php">Settings</a>';
+                  else :endif 
+                  ?>
                 <a href="index.php?logout">Logout</a>
               </span>
             <?php else : ?>

@@ -12,63 +12,73 @@
  	include 'header.php';
 ?>
 
-		<main>
+		<?php if ($_SESSION['my_user_perm'] == 'admin' || $_SESSION['my_user_perm'] == 'tech' ) : ?>
+			<main>
 
-			<div class="container">
+				<div class="container">
 
-				<div class="global_panel">
+					<div class="global_panel">
 
-					<h1 class="h3"><?php echo $pageTitle; ?></h1>
-					<hr>
+						<h1 class="h3"><?php echo $pageTitle; ?></h1>
+						<hr>
 
-					<div class="table-responsive">
-						<table class="table table-bordered table-striped">
+						<div class="table-responsive">
+							<table class="table table-bordered table-striped">
 
-							<thead>
-								<tr>
-									<th>Summary</th>
-									<th>ID</th>
-									<th>Call type</th>
-									<th>Priority</th>
-									<th>Date</th>
-								</tr>
-							</thead>
+								<thead>
+									<tr>
+										<th>Summary</th>
+										<th>ID</th>
+										<th>Call type</th>
+										<th>Priority</th>
+										<th>Date</th>
+									</tr>
+								</thead>
 
-							<tbody>
+								<tbody>
 
-							<?php 
+								<?php 
 
-							if ($db->connect_error) {
-								die("Connection failed:" . $db->connect_error);
-							}
+								if ($db->connect_error) {
+									die("Connection failed:" . $db->connect_error);
+								}
 
-							$tickets_sql = "SELECT * from tickets";
-							$result_sql = $db-> query($tickets_sql);
+								$tickets_sql = "SELECT * from tickets";
+								$result_sql = $db-> query($tickets_sql);
 
-							if ($result_sql-> num_rows > 0) {
-								while ($row_sql = $result_sql->fetch_assoc()) {
-									echo "<tr>";
-									echo "<td>" . $row_sql["summary"] . "</td>";
-									echo "<td>" . $row_sql["id"] . "</td>";
-									echo "<td>" . $row_sql["type"] . "</td>";
-									echo "<td>" . $row_sql["priority"] . "</td>";
-									echo "<td>" . $row_sql["timestamp"] . "</td>";
-									echo "</tr>";
-								} 
-							} else {
+								if ($result_sql-> num_rows > 0) {
+									while ($row_sql = $result_sql->fetch_assoc()) {
+										echo "<tr>";
+										echo "<td>" . $row_sql["summary"] . "</td>";
+										echo "<td>" . $row_sql["id"] . "</td>";
+										echo "<td>" . $row_sql["type"] . "</td>";
+										echo "<td>" . $row_sql["priority"] . "</td>";
+										echo "<td>" . $row_sql["timestamp"] . "</td>";
+										echo "</tr>";
+									} 
+								} else {
+									
+								}
 								
-							}
-							
-							?>
+								?>
 
-							</tbody>
-						</table>
+								</tbody>
+							</table>
+						</div>
+
 					</div>
 
 				</div>
 
-			</div>
+			</main>
 
-		</main>
+			<?php 
+			else : 
+
+				header("location: new-ticket.php");
+
+			endif
+			?>
+
 
 <?php include 'footer.php'; ?>
