@@ -36,7 +36,7 @@
 				$_SESSION['username'] = $username;
 
 				// get user info from database
-				$user_sql = "SELECT * from users WHERE username = '".$_SESSION['username']."' ";
+				$user_sql = "SELECT * from users WHERE username='".$_SESSION['username']."'";
 				$result_sql = $db-> query($user_sql);
 
 				// set session data
