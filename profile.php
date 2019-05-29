@@ -43,7 +43,7 @@
 
 						<div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
 							
-							<ul>
+							<ul class="list_unstyled">
 								<li>Username: <?php echo $_SESSION['my_username']; ?></li>
 								<li>Email: <?php echo $_SESSION['my_email']; ?></li>
 								<li>First Name: <?php echo $_SESSION['my_fname']; ?></li>
@@ -113,8 +113,6 @@
 						</div>
 
 					</div>
-
-
 
 				</div>
 

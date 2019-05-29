@@ -48,6 +48,16 @@ main {
   margin: 0 auto;
 }
 
+ul.list_unstyled {
+  margin: 0;
+  padding: 0;
+}
+ul.list_unstyled li {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
 footer {
   padding: 1rem 0;
 }
