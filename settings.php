@@ -43,7 +43,7 @@
 
 								<div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
 
-									<h2 class="h4 mb-4">Users</h2>
+									<h2 class="h4 mb-3">Admins</h2>
 									<div class="table-responsive">
 										<table class="table table-bordered table-striped">
 											<thead>
@@ -52,7 +52,6 @@
 													<th>Surname</th>
 													<th>Username</th>
 													<th>Email</th>
-													<th>User Level</th>
 												</tr>
 											</thead>
 											<tbody>
@@ -60,7 +59,7 @@
 											if ($db-> connect_error) {
 												die("Connection failed:" . $db->connect_error);
 											}
-											$users_sql = "SELECT * from users";
+											$users_sql = "SELECT * FROM users WHERE user_perm='admin'";
 											$result_sql = $db-> query($users_sql);
 											if ($result_sql-> num_rows > 0) {
 												while ($row_sql = $result_sql->fetch_assoc()) {
@@ -69,7 +68,6 @@
 													echo "<td>" . $row_sql["lname"] . "</td>";
 													echo "<td>" . $row_sql["username"] . "</td>";
 													echo "<td>" . $row_sql["email"] . "</td>";
-													echo "<td>" . $row_sql["user_perm"] . "</td>";
 													echo "</tr>";
 												}
 											} else {
@@ -79,11 +77,82 @@
 											</tbody>
 										</table>
 									</div>
+
+									<h2 class="h4 mb-3">Techs</h2>
+									<div class="table-responsive">
+										<table class="table table-bordered table-striped">
+											<thead>
+												<tr>
+													<th>Name</th>
+													<th>Surname</th>
+													<th>Username</th>
+													<th>Email</th>
+												</tr>
+											</thead>
+											<tbody>
+											<?php
+											if ($db-> connect_error) {
+												die("Connection failed:" . $db->connect_error);
+											}
+											$users_sql = "SELECT * FROM users WHERE user_perm='tech'";
+											$result_sql = $db-> query($users_sql);
+											if ($result_sql-> num_rows > 0) {
+												while ($row_sql = $result_sql->fetch_assoc()) {
+													echo "<tr>";
+													echo "<td>" . $row_sql["fname"] . "</td>";
+													echo "<td>" . $row_sql["lname"] . "</td>";
+													echo "<td>" . $row_sql["username"] . "</td>";
+													echo "<td>" . $row_sql["email"] . "</td>";
+													echo "</tr>";
+												}
+											} else {
+
+											}
+											?>
+											</tbody>
+										</table>
+									</div>
+
+									<h2 class="h4 mb-3">Users</h2>
+									<div class="table-responsive">
+										<table class="table table-bordered table-striped">
+											<thead>
+												<tr>
+													<th>Name</th>
+													<th>Surname</th>
+													<th>Username</th>
+													<th>Email</th>
+												</tr>
+											</thead>
+											<tbody>
+											<?php
+											if ($db-> connect_error) {
+												die("Connection failed:" . $db->connect_error);
+											}
+											$users_sql = "SELECT * FROM users WHERE user_perm='user'";
+											$result_sql = $db-> query($users_sql);
+											if ($result_sql-> num_rows > 0) {
+												while ($row_sql = $result_sql->fetch_assoc()) {
+													echo "<tr>";
+													echo "<td>" . $row_sql["fname"] . "</td>";
+													echo "<td>" . $row_sql["lname"] . "</td>";
+													echo "<td>" . $row_sql["username"] . "</td>";
+													echo "<td>" . $row_sql["email"] . "</td>";
+													echo "</tr>";
+												}
+											} else {
+
+											}
+											?>
+											</tbody>
+										</table>
+									</div>
+
 								</div>
 
 								<div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
 
-									<h2 class="h4 mb-4">Create user</h2>
+									<h2 class="h4 mb-3">Create user</h2>
 									<form action="settings.php" method="POST">
 
 										<?php include('inc/errors.php'); ?>
@@ -92,6 +161,7 @@
 											<label>User Level</label>
 											<select class="form-control" type="text" name="user_perm">
 												<option value="user" selected>User</option>
+												<option value="tech">Tech</option>
 												<option value="admin">Admin</option>
 											</select>
 										</div>
@@ -148,10 +218,11 @@
 
 		</main>
 
-	<?php else : 
-		
+	<?php 
+
+	else : 
 		header("location: index.php");
-		
-		endif ?>
+	endif 
+	?>
 
 <?php include 'footer.php'; ?>
