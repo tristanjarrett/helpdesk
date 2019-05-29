@@ -12,6 +12,13 @@ html, body {
   position: -webkit-sticky;
 }
 
+a {
+  color: #555;
+}
+a:hover {
+  color: #000;
+}
+
 .header .header_menu_left a {
   margin-right: .25rem;
 }
