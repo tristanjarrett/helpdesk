@@ -27,39 +27,67 @@
 					<h1 class="h3"><?php echo $pageTitle; ?></h1>
 					<hr>
 
-					<ul>
-						<li>Username: <?php echo $_SESSION['my_username']; ?></li>
-						<li>Email: <?php echo $_SESSION['my_email']; ?></li>
-						<li>First Name: <?php echo $_SESSION['my_fname']; ?></li>
-						<li>Last Name: <?php echo $_SESSION['my_lname']; ?></li>
+					<ul class="nav nav-tabs mb-4" id="myTab" role="tablist">
+						<li class="nav-item">
+							<a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Home</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" id="edit-tab" data-toggle="tab" href="#edit" role="tab" aria-controls="edit" aria-selected="false">Edit</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" id="password-tab" data-toggle="tab" href="#password" role="tab" aria-controls="password" aria-selected="false">Password</a>
+						</li>
 					</ul>
 
-					<hr>
+					<div class="tab-content" id="myTabContent">
 
-					<form action="" method="POST">
+						<div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+							
+							<ul>
+								<li>Username: <?php echo $_SESSION['my_username']; ?></li>
+								<li>Email: <?php echo $_SESSION['my_email']; ?></li>
+								<li>First Name: <?php echo $_SESSION['my_fname']; ?></li>
+								<li>Last Name: <?php echo $_SESSION['my_lname']; ?></li>
+							</ul>
 
-						<?php include('inc/errors.php'); ?>
-
-						<div class="form-group">
-							<label>Email: </label>
-							<input class="form-control" type="text" name="email" placeholder="Email" value="<?php echo $_SESSION['my_email']; ?>">
 						</div>
 
-						<div class="form-group">
-							<label>First Name: </label>
-							<input class="form-control" type="text" name="fname" placeholder="First Name" value="<?php echo $_SESSION['my_fname']; ?>">
+						<div class="tab-pane fade" id="edit" role="tabpanel" aria-labelledby="edit-tab">
+							
+							<form action="" method="POST">
+
+								<?php include('inc/errors.php'); ?>
+
+								<div class="form-group">
+									<label>Email: </label>
+									<input class="form-control" type="text" name="email" placeholder="Email" value="<?php echo $_SESSION['my_email']; ?>">
+								</div>
+
+								<div class="form-group">
+									<label>First Name: </label>
+									<input class="form-control" type="text" name="fname" placeholder="First Name" value="<?php echo $_SESSION['my_fname']; ?>">
+								</div>
+
+								<div class="form-group">
+									<label>Last Name: </label>
+									<input class="form-control" type="text" name="lname" placeholder="Last Name" value="<?php echo $_SESSION['my_lname']; ?>">
+								</div>
+
+								<div class="text-right">
+									<button class="btn btn-primary" type="submit" name="update_user">Update</button>
+								</div>
+
+							</form>
+
 						</div>
 
-						<div class="form-group">
-							<label>Last Name: </label>
-							<input class="form-control" type="text" name="lname" placeholder="Last Name" value="<?php echo $_SESSION['my_lname']; ?>">
+						<div class="tab-pane fade" id="password" role="tabpanel" aria-labelledby="password-tab">
+
 						</div>
 
-						<div class="text-right">
-							<button class="btn btn-primary" type="submit" name="update_user">Update</button>
-						</div>
+					</div>
 
-					</form>
+
 
 				</div>
 
