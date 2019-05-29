@@ -148,14 +148,10 @@
 
 		</main>
 
-	<?php else : ?>
-		<main>
-			<div class="container">
-				<div class="global_panel">
-					Access denied, please log in with admin
-				</div>
-			</div>
-		</main>
-	<?php endif ?>
+	<?php else : 
+		
+		header("location: index.php");
+		
+		endif ?>
 
 <?php include 'footer.php'; ?>
