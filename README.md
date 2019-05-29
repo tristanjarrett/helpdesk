@@ -16,6 +16,7 @@ CREATE TABLE `tickets` (
   `priority` varchar(100) NOT NULL,
   `timestamp` varchar(100) NOT NULL,
   `summary` varchar(100) NOT NULL,
-  `description` varchar(100) NOT NULL
+  `description` varchar(100) NOT NULL,
+  `logged_by` varchar(100) NOT NULL
 );
 ```

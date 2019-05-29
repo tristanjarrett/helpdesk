@@ -30,6 +30,7 @@
 										<th>Summary</th>
 										<th>ID</th>
 										<th>Call type</th>
+										<th>Logged by</th>
 										<th>Priority</th>
 										<th>Date</th>
 									</tr>
@@ -37,7 +38,7 @@
 
 								<tbody>
 
-								<?php 
+								<?php
 
 								if ($db->connect_error) {
 									die("Connection failed:" . $db->connect_error);
@@ -52,14 +53,15 @@
 										echo "<td>" . $row_sql["summary"] . "</td>";
 										echo "<td>" . $row_sql["id"] . "</td>";
 										echo "<td>" . $row_sql["type"] . "</td>";
+										echo "<td>" . $row_sql["logged_by"] . "</td>";
 										echo "<td>" . $row_sql["priority"] . "</td>";
 										echo "<td>" . $row_sql["timestamp"] . "</td>";
 										echo "</tr>";
-									} 
+									}
 								} else {
-									
+
 								}
-								
+
 								?>
 
 								</tbody>
@@ -72,8 +74,8 @@
 
 			</main>
 
-			<?php 
-			else : 
+			<?php
+			else :
 
 				header("location: new-ticket.php");
 
