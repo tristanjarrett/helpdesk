@@ -44,10 +44,10 @@
 						<div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
 							
 							<ul class="list_unstyled">
-								<li>Username: <?php echo $_SESSION['my_username']; ?></li>
-								<li>Email: <?php echo $_SESSION['my_email']; ?></li>
-								<li>First Name: <?php echo $_SESSION['my_fname']; ?></li>
-								<li>Last Name: <?php echo $_SESSION['my_lname']; ?></li>
+								<li>Username: <strong><?php echo $_SESSION['my_username']; ?></strong></li>
+								<li>Email: <strong><?php echo $_SESSION['my_email']; ?></strong></li>
+								<li>First Name: <strong><?php echo $_SESSION['my_fname']; ?></strong></li>
+								<li>Last Name: <strong><?php echo $_SESSION['my_lname']; ?></strong></li>
 							</ul>
 
 						</div>
