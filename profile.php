@@ -30,7 +30,7 @@
 					<ul>
 						<li>Username: <?php echo $_SESSION['my_username']; ?></li>
 						<li>Email: <?php echo $_SESSION['my_email']; ?></li>
-						<li>Fist Name: <?php echo $_SESSION['my_fname']; ?></li>
+						<li>First Name: <?php echo $_SESSION['my_fname']; ?></li>
 						<li>Last Name: <?php echo $_SESSION['my_lname']; ?></li>
 					</ul>
 
@@ -40,9 +40,22 @@
 
 						<?php include('inc/errors.php'); ?>
 
-						<div class="form-inline">
-							<label class="mr-2">Email: </label>
-							<input class="form-control mr-2" type="text" name="email" placeholder="Email" value="<?php echo $_SESSION['my_email']; ?>">
+						<div class="form-group">
+							<label>Email: </label>
+							<input class="form-control" type="text" name="email" placeholder="Email" value="<?php echo $_SESSION['my_email']; ?>">
+						</div>
+
+						<div class="form-group">
+							<label>First Name: </label>
+							<input class="form-control" type="text" name="fname" placeholder="First Name" value="<?php echo $_SESSION['my_fname']; ?>">
+						</div>
+
+						<div class="form-group">
+							<label>Last Name: </label>
+							<input class="form-control" type="text" name="lname" placeholder="Last Name" value="<?php echo $_SESSION['my_lname']; ?>">
+						</div>
+
+						<div class="text-right">
 							<button class="btn btn-primary" type="submit" name="update_user">Update</button>
 						</div>
 
