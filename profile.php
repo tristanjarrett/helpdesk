@@ -21,6 +21,9 @@
 
 				<div class="global_panel">
 
+					<?php echo $_SESSION['success']; ?>
+					<?php echo $_SESSION['error']; ?>
+
 					<h1 class="h3"><?php echo $pageTitle; ?></h1>
 					<hr>
 
@@ -29,7 +32,6 @@
 						<li>Email: <?php echo $_SESSION['my_email']; ?></li>
 						<li>Fist Name: <?php echo $_SESSION['my_fname']; ?></li>
 						<li>Last Name: <?php echo $_SESSION['my_lname']; ?></li>
-						<li>User Level: <?php echo $_SESSION['my_user_perm']; ?></li>
 					</ul>
 
 					<hr>
