@@ -59,13 +59,18 @@
 								<?php include('inc/errors.php'); ?>
 
 								<div class="form-group">
+									<label>Username</label>
+									<input class="form-control" type="text" name="username" placeholder="Username" value="<?php echo $_SESSION['my_username']; ?>">
+								</div>
+
+								<div class="form-group">
 									<label>Name</label>
-									<input class="form-control" type="text" name="fname" placeholder="First Name" value="<?php echo $_SESSION['my_fname']; ?>">
+									<input class="form-control" type="text" name="fname" placeholder="Name" value="<?php echo $_SESSION['my_fname']; ?>">
 								</div>
 
 								<div class="form-group">
 									<label>Surname</label>
-									<input class="form-control" type="text" name="lname" placeholder="Last Name" value="<?php echo $_SESSION['my_lname']; ?>">
+									<input class="form-control" type="text" name="lname" placeholder="Surname" value="<?php echo $_SESSION['my_lname']; ?>">
 								</div>
 
 								<div class="form-group">

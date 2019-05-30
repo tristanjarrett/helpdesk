@@ -17,9 +17,14 @@
 	 * edit user
 	 */
 	if (isset($_POST['update_user'])) {
+		$username = mysqli_real_escape_string($db, $_POST['username']);
 		$email = mysqli_real_escape_string($db, $_POST['email']);
 		$fname = mysqli_real_escape_string($db, $_POST['fname']);
 		$lname = mysqli_real_escape_string($db, $_POST['lname']);
+
+		if (empty($username)) {
+			array_push($errors, "Username is required");
+		}
 
 		if (empty($email)) {
 			array_push($errors, "Email is required");
@@ -35,7 +40,7 @@
 
 		// create user if there are no errors in the form
 		if (count($errors) == 0) {
-			$query = "UPDATE users SET email='$email', fname='$fname', lname='$lname' WHERE id='".$_SESSION['my_id']."'";
+			$query = "UPDATE users SET username='$username', email='$email', fname='$fname', lname='$lname' WHERE id='".$_SESSION['my_id']."'";
 			mysqli_query($db, $query);
 			$_SESSION['success'] = '<div class="alert alert-success">
 			<button type="button" class="close" data-dismiss="alert" aria-label="Close">
@@ -51,11 +56,12 @@
 			// update session data
 			if ($result_sql-> num_rows > 0) {
 				while ($row_sql = $result_sql->fetch_assoc()) {
+					$_SESSION['my_username'] = $row_sql["username"];
 					$_SESSION['my_email'] = $row_sql["email"];
 					$_SESSION['my_fname'] = $row_sql["fname"];
 					$_SESSION['my_lname'] = $row_sql["lname"];
-				} 
-			} 
+				}
+			}
 
 		} else {
 			$_SESSION['error'] = '<div class="alert alert-danger">
@@ -112,8 +118,8 @@
 			if ($result_sql-> num_rows > 0) {
 				while ($row_sql = $result_sql->fetch_assoc()) {
 					$_SESSION['my_password'] = $row_sql["password"];
-				} 
-			} 
+				}
+			}
 
 		} else {
 			$_SESSION['error'] = '<div class="alert alert-danger">
