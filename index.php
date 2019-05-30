@@ -32,7 +32,7 @@
 										<th>Call type</th>
 										<th>Logged by</th>
 										<th>Priority</th>
-										<th>Date</th>
+										<th>Date logged</th>
 									</tr>
 								</thead>
 
