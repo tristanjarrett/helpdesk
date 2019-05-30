@@ -171,16 +171,14 @@
 											<input class="form-control" type="text" name="username" placeholder="Username">
 										</div>
 
-										<div class="form-row form-group">
-											<div class="col-md">
-												<label for="fname">Name</label>
-												<input class="form-control" type="text" name="fname" id="fname" placeholder="First name">
-											</div>
+										<div class="form-group">
+											<label for="fname">Name</label>
+											<input class="form-control" type="text" name="fname" id="fname" placeholder="First name">
+										</div>
 
-											<div class="col-md">
-												<label for="lname">Surname</label>
-												<input class="form-control" type="text" name="lname" id="lname" placeholder="Last name">
-											</div>
+										<div class="form-group">
+											<label for="lname">Surname</label>
+											<input class="form-control" type="text" name="lname" id="lname" placeholder="Last name">
 										</div>
 
 										<div class="form-group">
@@ -188,13 +186,13 @@
 											<input class="form-control" type="email" name="email" placeholder="Email">
 										</div>
 
-										<div class="form-row form-group">
-											<div class="col-md">
+										<div class="form-row">
+											<div class="form-group col-md">
 												<label>Password</label>
 												<input class="form-control" type="password" placeholder="Password" name="password">
 											</div>
 
-											<div class="col-md">
+											<div class="form-group col-md">
 												<label>Verify Password</label>
 												<input class="form-control" type="password" placeholder="Verify Password" name="password_verify">
 											</div>
