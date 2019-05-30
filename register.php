@@ -1,7 +1,7 @@
 <?php
 	$pageTitle = 'Register';
 	include 'header.php';
-	 
+
 	// register script (after header)
 	include 'inc/users/register.php';
 ?>
@@ -58,7 +58,7 @@
 				</div>
 
 			</div>
-			
+
 		</main>
 
 <?php include 'footer.php'; ?>
