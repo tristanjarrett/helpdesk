@@ -1,0 +1,76 @@
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+html, body {
+  background-color: #f9f9f9;
+}
+
+a {
+  color: #333;
+  &:hover {
+    color: #000;
+  }
+}
+
+.header {
+  padding: .5rem 0;
+  border-bottom: solid 1px #e1e1e1;
+  background-color: #ffffff;
+  z-index: 999;
+  top: 0;
+  position: sticky;
+  position: -webkit-sticky;
+  .header_menu_left {
+    a {
+    margin-right: .25rem;
+    }
+  }
+  .header_menu_right {
+    a {
+    margin-left: .25rem;
+    }
+  }
+}
+
+.brand {
+  color: #666666;
+  text-decoration: none !important;
+  margin-right: 1rem;
+  img {
+    height: 2rem;
+    width: auto;
+  }
+}
+
+main {
+  padding: 2rem 0;
+}
+
+.global_panel {
+  padding: 1.5rem;
+  background-color: #ffffff;
+  border: solid 1px #e1e1e1;
+  border-radius: .25rem;
+}
+
+.login_page,
+.register_page {
+  .global_panel {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+}
+
+ul.list_unstyled {
+  margin: 0;
+  padding: 0;
+  li {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    margin-bottom: .25rem;
+  }
+}
+
+footer {
+  padding: 1rem 0;
+}

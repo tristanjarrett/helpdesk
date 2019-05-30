@@ -19,7 +19,6 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
     <title><?php echo $pageTitle . ' - ' . $siteTitle; ?></title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link href="css/main.css" rel="stylesheet">
   </head>
   <body>
@@ -36,10 +35,10 @@
 
             <?php if (isset($_SESSION["my_id"])) : ?>
             <span class="header_menu_left">
-              <?php if ($_SESSION['my_user_perm'] == 'admin' || $_SESSION['my_user_perm'] == 'tech' ) : 
+              <?php if ($_SESSION['my_user_perm'] == 'admin' || $_SESSION['my_user_perm'] == 'tech' ) :
                 echo '<a href="./">Dashboard</a>';
-              else : 
-              endif 
+              else :
+              endif
               ?>
               <a href="new-ticket.php">Log a ticket</a>
             </span>
@@ -53,10 +52,10 @@
               <span class="header_menu_right">
                 <strong><?php echo $_SESSION["my_fname"] . " " . $_SESSION["my_lname"]; ?></strong>
                 <a href="profile.php">Profile</a>
-                  <?php 
-                  if ($_SESSION['my_user_perm'] == 'admin') : 
+                  <?php
+                  if ($_SESSION['my_user_perm'] == 'admin') :
                     echo '<a href="settings.php">Settings</a>';
-                  else :endif 
+                  else :endif
                   ?>
                 <a href="index.php?logout">Logout</a>
               </span>

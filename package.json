@@ -1,0 +1,24 @@
+{
+  "name": "helpdesk",
+  "version": "1.0.0",
+  "description": "```sql\r CREATE TABLE `users` (\r   `id` int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,\r   `username` varchar(100) NOT NULL UNIQUE,\r   `user_perm` varchar(100) NOT NULL,\r   `fname` varchar(100) NOT NULL,\r   `lname` varchar(100) NOT NULL,\r   `email` varchar(100) NOT NULL,\r   `password` varchar(100) NOT NULL\r );\r CREATE TABLE `tickets` (\r   `id` int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,\r   `type` varchar(100) NOT NULL,\r   `priority` varchar(100) NOT NULL,\r   `timestamp` varchar(100) NOT NULL,\r   `summary` varchar(100) NOT NULL,\r   `description` varchar(100) NOT NULL,\r   `logged_by` varchar(100) NOT NULL\r );\r ```",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch scss:css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tristanjarrett/helpdesk.git"
+  },
+  "author": "Tristan Jarrett",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tristanjarrett/helpdesk/issues"
+  },
+  "homepage": "https://github.com/tristanjarrett/helpdesk#readme",
+  "dependencies": {
+    "bootstrap": "^4.3.1",
+    "jquery": "^3.4.1",
+    "popper.js": "^1.15.0"
+  }
+}
