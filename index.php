@@ -27,8 +27,8 @@
 
 								<thead>
 									<tr>
-										<th>Summary</th>
 										<th>ID</th>
+										<th>Summary</th>
 										<th>Call type</th>
 										<th>Logged by</th>
 										<th>Priority</th>
@@ -44,22 +44,32 @@
 									die("Connection failed:" . $db->connect_error);
 								}
 
-								$tickets_sql = "SELECT * from tickets";
+								$tickets_sql = "SELECT * FROM tickets";
 								$result_sql = $db-> query($tickets_sql);
-
 								if ($result_sql-> num_rows > 0) {
 									while ($row_sql = $result_sql->fetch_assoc()) {
+
+										$user_id = $row_sql['logged_by'];
+
+										// get Name by ID
+										$name_sql = "SELECT * FROM users WHERE id='".$user_id."'";
+										$return_sql = $db-> query($name_sql);
+										if ($return_sql-> num_rows > 0) {
+											while ($id_sql = $return_sql->fetch_assoc()) {
+												$logged_by_user_id = $id_sql['fname'] . " " . $id_sql['lname'];
+											}
+										}
+										// end get Name by ID
+
 										echo "<tr>";
-										echo "<td>" . $row_sql["summary"] . "</td>";
 										echo "<td>" . $row_sql["id"] . "</td>";
+										echo "<td>" . $row_sql["summary"] . "</td>";
 										echo "<td>" . $row_sql["type"] . "</td>";
-										echo "<td>" . $row_sql["logged_by"] . "</td>";
+										echo "<td>" . $logged_by_user_id . "</td>";
 										echo "<td>" . $row_sql["priority"] . "</td>";
 										echo "<td>" . $row_sql["timestamp"] . "</td>";
 										echo "</tr>";
 									}
-								} else {
-
 								}
 
 								?>
