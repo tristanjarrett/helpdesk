@@ -1,7 +1,7 @@
 <?php
 
 	$pageTitle = 'Login';
-	 include 'header.php';
+	include 'header.php';
 
 	// new ticket script (after header)
 	include 'inc/users/login.php';
@@ -17,7 +17,7 @@
 					<hr>
 
 					<form action="" method="POST">
-					
+
 						<?php include('inc/errors.php'); ?>
 
 						<div class="form-group">

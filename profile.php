@@ -9,7 +9,7 @@
 	}
 
 	$pageTitle = 'Profile';
-	 include 'header.php';
+	include 'header.php';
 
 	// edit user script (after header)
 	include 'inc/users/update.php';

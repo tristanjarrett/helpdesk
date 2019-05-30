@@ -1,9 +1,10 @@
 <?php
 
+  // dev options
+  $debug_mode = true;
+
   // connect database
   require './inc/config/database.php';
-  
-  $debug_mode = true;
 
   // debugging
   if ($debug_mode == TRUE) {
