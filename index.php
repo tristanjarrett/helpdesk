@@ -52,7 +52,7 @@
 										$user_id = $row_sql['logged_by'];
 
 										// get Name by ID
-										$name_sql = "SELECT * FROM users WHERE id='".$user_id."'";
+										$name_sql = "SELECT fname, lname FROM users WHERE id='".$user_id."'";
 										$return_sql = $db-> query($name_sql);
 										if ($return_sql-> num_rows > 0) {
 											while ($id_sql = $return_sql->fetch_assoc()) {
