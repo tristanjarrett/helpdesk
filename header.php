@@ -41,7 +41,7 @@
               endif
               ?>
               <a href="new-ticket.php">Log a ticket</a>
-              <a href="my-tickets.php">My tickets</a>
+              <a href="my-requests.php">My requests</a>
             </span>
             <?php else : ?>
 

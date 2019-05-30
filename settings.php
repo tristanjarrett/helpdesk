@@ -158,7 +158,7 @@
 										<?php include('inc/errors.php'); ?>
 
 										<div class="form-group">
-											<label>User Level</label>
+											<label>User level</label>
 											<select class="form-control" type="text" name="user_perm">
 												<option value="user" selected>User</option>
 												<option value="tech">Tech</option>
@@ -193,8 +193,8 @@
 											</div>
 
 											<div class="form-group col-md">
-												<label>Verify Password</label>
-												<input class="form-control" type="password" placeholder="Verify Password" name="password_verify">
+												<label>Verify password</label>
+												<input class="form-control" type="password" placeholder="Verify password" name="password_verify">
 											</div>
 										</div>
 

@@ -93,19 +93,19 @@
 								<?php include('inc/errors.php'); ?>
 
 								<div class="form-group">
-									<label>Old Password</label>
-									<input class="form-control" type="password" placeholder="Old Password" name="password_old">
+									<label>Old password</label>
+									<input class="form-control" type="password" placeholder="Old password" name="password_old">
 								</div>
 
 								<div class="form-row">
 									<div class="form-group col-md">
-										<label>New Password</label>
-										<input class="form-control" type="password" placeholder="New Password" name="password">
+										<label>New password</label>
+										<input class="form-control" type="password" placeholder="New password" name="password">
 									</div>
 
 									<div class="form-group col-md">
-										<label>Verify Password</label>
-										<input class="form-control" type="password" placeholder="Verify Password" name="password_verify">
+										<label>Verify password</label>
+										<input class="form-control" type="password" placeholder="Verify password" name="password_verify">
 									</div>
 								</div>
 
