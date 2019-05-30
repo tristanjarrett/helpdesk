@@ -9,8 +9,6 @@
 		header("location: login.php");
 	}
 
-  require './inc/config.php';
-
   $siteTitle = 'Helpdesk';
 ?>
 <!DOCTYPE html>
