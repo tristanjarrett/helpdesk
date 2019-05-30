@@ -1,7 +1,7 @@
 <?php
 
   // dev options
-  $debug_mode = true;
+  $debug_mode = false;
 
   // connect database
   require './inc/config/database.php';
