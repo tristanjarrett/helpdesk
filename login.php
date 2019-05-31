@@ -30,6 +30,11 @@
 							<input class="form-control" name="password" type="password" id="password" placeholder="Password">
 						</div>
 
+						<div class="form-group">
+					    <input type="checkbox" id="remember" name="remember">
+							<label for="remember">Remember me</label>
+					  </div>
+
 						<div class="text-right">
 							<button class="btn btn-primary" type="submit" name="login_user">Login</button>
 						</div>
