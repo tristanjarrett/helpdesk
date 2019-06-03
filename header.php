@@ -43,9 +43,9 @@
               <li><a href="new-request.php">New Request</a></li>
               <li><a href="my-requests.php">My Requests</a></li>
             </ul>
-            <?php else : ?>
-
-            <?php endif ?>
+            <?php else :
+              echo $siteTitle;
+            endif ?>
           </span>
 
             <?php
