@@ -1,5 +1,5 @@
     <footer class="footer">
-      <div class="container">
+      <div class="container-fluid">
         <span>&copy; <?php echo date('Y') . ' ' . $siteTitle; ?></span>
       </div>
     </footer>
