@@ -26,7 +26,7 @@
     <div class="row no-gutters">
 
       <div class="col-auto fixed_sidebar">
-        hi
+        
       </div>
 
       <div class="col site_content">
