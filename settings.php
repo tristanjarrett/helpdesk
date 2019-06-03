@@ -27,7 +27,6 @@
 					<?php echo $_SESSION['error']; ?>
 
 					<h1 class="h3"><?php echo $pageTitle; ?></h1>
-					<hr>
 
 					<div class="row">
 
@@ -44,11 +43,10 @@
 								<div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
 
 									<h2 class="h4 mb-3">Users</h2>
-									<hr>
 
 									<h3 class="h5 my-3">Admins</h3>
 									<div class="table-responsive">
-										<table class="table table-bordered table-striped table-sm">
+										<table class="table table-bordered table-striped">
 											<thead>
 												<tr>
 													<th>Name</th>
@@ -86,7 +84,7 @@
 
 									<h3 class="h5 my-3">Techs</h3>
 									<div class="table-responsive">
-										<table class="table table-bordered table-striped table-sm">
+										<table class="table table-bordered table-striped">
 											<thead>
 												<tr>
 													<th>Name</th>
@@ -124,7 +122,7 @@
 
 									<h3 class="h5 my-3">Users</h3>
 									<div class="table-responsive">
-										<table class="table table-bordered table-striped table-sm">
+										<table class="table table-bordered table-striped">
 											<thead>
 												<tr>
 													<th>Name</th>
@@ -165,7 +163,7 @@
 								<div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
 
 									<h2 class="h4 mb-3">Create user</h2>
-									<hr>
+
 									<form action="settings.php" method="POST">
 
 										<?php include('inc/errors.php'); ?>

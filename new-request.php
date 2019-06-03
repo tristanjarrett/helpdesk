@@ -25,7 +25,6 @@
 					<?php echo $_SESSION['error']; ?>
 
 					<h1 class="h3"><?php echo $pageTitle; ?></h1>
-					<hr>
 
 					<form action="" method="POST">
 

@@ -19,7 +19,6 @@
 					<div class="global_panel">
 
 						<h1 class="h3"><?php echo $pageTitle; ?></h1>
-						<hr>
 
 						<div class="table-responsive">
 							<table class="table table-bordered table-striped">
