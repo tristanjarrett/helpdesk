@@ -58,7 +58,7 @@
 												$logged_by_user_id = $id_sql['fname'] . " " . $id_sql['lname'];
 											}
 										} else {
-											$logged_by_user_id = '<span style="color: red;">Deleted user</span>';
+											$logged_by_user_id = '<span style="color: red;">User deleted</span>';
 										}
 										// end get Name by ID
 
