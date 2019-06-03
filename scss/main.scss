@@ -1,10 +1,23 @@
 @import "../node_modules/bootstrap/scss/bootstrap";
 
+html, body {
+  background-color: #f7f7f9 !important;
+}
+
 a {
   color: #333;
   &:hover {
     color: #000;
   }
+}
+
+.fixed_sidebar {
+  width: 200px;
+  height: 100vh;
+  position: sticky;
+  top: 0;
+  background-color: lighten(#323436, 10%);
+  color: #ffffff;
 }
 
 .page_title {
@@ -52,23 +65,26 @@ a {
 }
 
 .global_panel {
+  padding: 1.5rem;
   background-color: #ffffff;
-  padding: 1rem 0;
+  border-radius: .25rem;
+  box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.1);
 }
 
 .login_page,
 .register_page {
   .global_panel {
     max-width: 600px;
-    margin: 100px auto;
-    padding: 1.5rem;
-    background-color: #ffffff;
-    border-radius: .25rem;
-    box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.1);
+    margin: 80px auto;
   }
 }
 
+main {
+  padding: 1rem 0;
+}
+
 footer {
-  text-align: right;
+  background-color: #ffffff;
+  text-align: center;
   padding: 1rem 0;
 }

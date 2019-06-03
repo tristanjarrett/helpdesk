@@ -7590,10 +7590,21 @@ a.text-dark:hover, a.text-dark:focus {
   .table .thead-dark th {
     color: inherit;
     border-color: #dee2e6; } }
+html, body {
+  background-color: #f7f7f9 !important; }
+
 a {
   color: #333; }
   a:hover {
     color: #000; }
+
+.fixed_sidebar {
+  width: 200px;
+  height: 100vh;
+  position: sticky;
+  top: 0;
+  background-color: #4b4e50;
+  color: #ffffff; }
 
 .page_title {
   text-decoration: underline;
@@ -7631,20 +7642,22 @@ a {
     width: auto; }
 
 .global_panel {
-  background-color: #ffffff;
-  padding: 1rem 0; }
-
-.login_page .global_panel,
-.register_page .global_panel {
-  max-width: 600px;
-  margin: 100px auto;
   padding: 1.5rem;
   background-color: #ffffff;
   border-radius: .25rem;
   box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.1); }
 
+.login_page .global_panel,
+.register_page .global_panel {
+  max-width: 600px;
+  margin: 80px auto; }
+
+main {
+  padding: 1rem 0; }
+
 footer {
-  text-align: right;
+  background-color: #ffffff;
+  text-align: center;
   padding: 1rem 0; }
 
 /*# sourceMappingURL=main.css.map */

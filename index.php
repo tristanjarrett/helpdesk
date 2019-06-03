@@ -14,9 +14,9 @@
 
 		<?php if ($_SESSION['my_user_perm'] == 'admin' || $_SESSION['my_user_perm'] == 'tech' ) : ?>
 
-			<main class="global_panel">
+			<main class="container-fluid">
 
-					<div class="container-fluid">
+					<div class="global_panel">
 
 						<h1 class="h4 page_title"><?php echo $pageTitle; ?></h1>
 

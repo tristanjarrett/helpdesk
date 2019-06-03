@@ -14,9 +14,9 @@
 
 			<main>
 
-				<div class="global_panel">
+				<div class="container-fluid">
 
-					<div class="container-fluid">
+					<div class="global_panel">
 
 						<h1 class="h4 page_title"><?php echo $pageTitle; ?></h1>
 

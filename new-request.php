@@ -17,9 +17,9 @@
 
     <main>
 
-			<div class="global_panel">
+			<div class="container-fluid">
 
-				<div class="container">
+				<div class="global_panel">
 
 					<?php echo $_SESSION['success']; ?>
 					<?php echo $_SESSION['error']; ?>
