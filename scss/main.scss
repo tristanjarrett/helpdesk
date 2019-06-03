@@ -1,9 +1,5 @@
 @import "../node_modules/bootstrap/scss/bootstrap";
 
-html, body {
-  background-color: #f9f9f9;
-}
-
 a {
   color: #333;
   &:hover {
@@ -75,6 +71,4 @@ a {
 footer {
   text-align: right;
   padding: 1rem 0;
-  background-color: #323436;
-  color: #ffffff;
 }
