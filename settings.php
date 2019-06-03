@@ -70,7 +70,7 @@
 														<td><?php echo $row_sql["lname"]; ?></td>
 														<td><?php echo $row_sql["username"]; ?></td>
 														<td><?php echo $row_sql["email"]; ?></td>
-														<td><a href="delete.php?delete=<?php echo $row_sql['id']; ?>">Delete</a></td>
+														<td><a href="settings.php?delete=<?php echo $row_sql['id']; ?>">Delete</a></td>
 													</tr>
 													<?php
 												}
@@ -108,7 +108,7 @@
 														<td><?php echo $row_sql["lname"]; ?></td>
 														<td><?php echo $row_sql["username"]; ?></td>
 														<td><?php echo $row_sql["email"]; ?></td>
-														<td><a href="delete.php?delete=<?php echo $row_sql['id']; ?>">Delete</a></td>
+														<td><a href="settings.php?delete=<?php echo $row_sql['id']; ?>">Delete</a></td>
 													</tr>
 													<?php
 												}
@@ -146,7 +146,7 @@
 														<td><?php echo $row_sql["lname"]; ?></td>
 														<td><?php echo $row_sql["username"]; ?></td>
 														<td><?php echo $row_sql["email"]; ?></td>
-														<td><a href="delete.php?delete=<?php echo $row_sql['id']; ?>">Delete</a></td>
+														<td><a href="settings.php?delete=<?php echo $row_sql['id']; ?>">Delete</a></td>
 													</tr>
 													<?php
 												}
