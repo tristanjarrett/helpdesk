@@ -8,7 +8,7 @@
 		header("location: login.php");
 	}
 
-	$pageTitle = 'My tickets';
+	$pageTitle = 'My Requests';
  	include 'header.php';
 ?>
 

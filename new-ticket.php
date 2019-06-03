@@ -8,7 +8,7 @@
 		header("location: login.php");
 	}
 
-  $pageTitle = 'Log a ticket';
+  $pageTitle = 'New Request';
 	include 'header.php';
 
 	// new ticket script (after header)

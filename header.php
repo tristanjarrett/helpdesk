@@ -24,7 +24,7 @@
   <body>
 
     <header class="header">
-      <div class="container-fluid">
+      <div class="container">
 
         <div class="d-flex justify-content-between align-items-center">
 
@@ -34,15 +34,15 @@
             </a>
 
             <?php if (isset($_SESSION["my_id"])) : ?>
-            <span class="header_menu_left">
+            <ul class="header_menu_left">
               <?php if ($_SESSION['my_user_perm'] == 'admin' || $_SESSION['my_user_perm'] == 'tech' ) :
-                echo '<a href="./">Dashboard</a>';
+                echo '<li><a href="./">Dashboard</a></li>';
               else :
               endif
               ?>
-              <a href="new-ticket.php">Log a ticket</a>
-              <a href="my-requests.php">My requests</a>
-            </span>
+              <li><a href="new-ticket.php">New Request</a></li>
+              <li><a href="my-requests.php">My Requests</a></li>
+            </ul>
             <?php else : ?>
 
             <?php endif ?>
@@ -50,21 +50,21 @@
 
             <?php
             if (isset($_SESSION["my_id"])) : ?>
-              <span class="header_menu_right">
-                <strong><?php echo $_SESSION["my_fname"] . " " . $_SESSION["my_lname"]; ?></strong>
-                <a href="profile.php">Profile</a>
+              <ul class="header_menu_right">
+                <li><strong><?php echo $_SESSION["my_fname"] . " " . $_SESSION["my_lname"]; ?></strong></li>
+                <li><a href="profile.php">Profile</a></li>
                   <?php
                   if ($_SESSION['my_user_perm'] == 'admin') :
-                    echo '<a href="settings.php">Settings</a>';
+                    echo '<li><a href="settings.php">Settings</a></li>';
                   else :endif
                   ?>
-                <a href="index.php?logout">Logout</a>
-              </span>
+                <li><a href="index.php?logout" class="btn btn-secondary">Logout</a></li>
+              </ul>
             <?php else : ?>
-              <span class="header_menu_right">
-                <a href="register.php">Register</a>
-                <a href="login.php">Login</a>
-              </span>
+              <ul class="header_menu_right">
+                <li><a href="login.php">Login</a></li>
+                <li><a href="register.php" class="btn btn-secondary">Register</a></li>
+              </ul>
             <?php endif ?>
 
         </div>

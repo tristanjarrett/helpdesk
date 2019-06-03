@@ -49,14 +49,14 @@
 						$_SESSION['my_email'] = $row_sql["email"];
 						$_SESSION['my_user_perm'] = $row_sql["user_perm"];
 						$_SESSION['my_password'] = $row_sql["password"];
-					} 
-				} 
-				
+					}
+				}
+
 				header('location: ./');
 
 			} else {
 				// error if no details match
-				array_push($errors, "Incorrect Username or Password");
+				array_push($errors, "Incorrect username / password");
 			}
 		}
 	}

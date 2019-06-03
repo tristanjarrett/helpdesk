@@ -29,10 +29,7 @@
 
 					<ul class="nav nav-tabs mb-4" id="myTab" role="tablist">
 						<li class="nav-item">
-							<a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Details</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" id="edit-tab" data-toggle="tab" href="#edit" role="tab" aria-controls="edit" aria-selected="false">Edit</a>
+							<a class="nav-link active" id="edit-tab" data-toggle="tab" href="#edit" role="tab" aria-controls="edit" aria-selected="false">Details</a>
 						</li>
 						<li class="nav-item">
 							<a class="nav-link" id="password-tab" data-toggle="tab" href="#password" role="tab" aria-controls="password" aria-selected="false">Password</a>
@@ -41,18 +38,7 @@
 
 					<div class="tab-content" id="myTabContent">
 
-						<div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-
-							<ul class="list_unstyled">
-								<li>Username: <strong><?php echo $_SESSION['my_username']; ?></strong></li>
-								<li>Name: <strong><?php echo $_SESSION['my_fname']; ?></strong></li>
-								<li>Surname: <strong><?php echo $_SESSION['my_lname']; ?></strong></li>
-								<li>Email: <strong><?php echo $_SESSION['my_email']; ?></strong></li>
-							</ul>
-
-						</div>
-
-						<div class="tab-pane fade" id="edit" role="tabpanel" aria-labelledby="edit-tab">
+						<div class="tab-pane fade show active" id="edit" role="tabpanel" aria-labelledby="edit-tab">
 
 							<form action="" method="POST">
 
