@@ -15,7 +15,6 @@
 	include 'inc/users/create.php';
 ?>
 
-
 	<?php if ($_SESSION['my_user_perm'] == 'admin') : ?>
 		<main>
 
