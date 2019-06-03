@@ -43,15 +43,19 @@
 
 								<div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
 
-									<h2 class="h4 mb-3">Admins</h2>
+									<h2 class="h4 mb-3">Users</h2>
+									<hr>
+
+									<h3 class="h5 my-3">Admins</h3>
 									<div class="table-responsive">
-										<table class="table table-bordered table-striped">
+										<table class="table table-bordered table-striped table-sm">
 											<thead>
 												<tr>
 													<th>Name</th>
 													<th>Surname</th>
 													<th>Username</th>
 													<th>Email</th>
+													<th>Action</th>
 												</tr>
 											</thead>
 											<tbody>
@@ -62,13 +66,15 @@
 											$users_sql = "SELECT * FROM users WHERE user_perm='admin'";
 											$result_sql = $db-> query($users_sql);
 											if ($result_sql-> num_rows > 0) {
-												while ($row_sql = $result_sql->fetch_assoc()) {
-													echo "<tr>";
-													echo "<td>" . $row_sql["fname"] . "</td>";
-													echo "<td>" . $row_sql["lname"] . "</td>";
-													echo "<td>" . $row_sql["username"] . "</td>";
-													echo "<td>" . $row_sql["email"] . "</td>";
-													echo "</tr>";
+												while ($row_sql = $result_sql->fetch_assoc()) { ?>
+													<tr>
+														<td><?php echo $row_sql["fname"]; ?></td>
+														<td><?php echo $row_sql["lname"]; ?></td>
+														<td><?php echo $row_sql["username"]; ?></td>
+														<td><?php echo $row_sql["email"]; ?></td>
+														<td><a href="delete.php?delete=<?php echo $row_sql['id']; ?>">Delete</a></td>
+													</tr>
+													<?php
 												}
 											} else {
 
@@ -78,15 +84,16 @@
 										</table>
 									</div>
 
-									<h2 class="h4 mb-3">Techs</h2>
+									<h3 class="h5 my-3">Techs</h3>
 									<div class="table-responsive">
-										<table class="table table-bordered table-striped">
+										<table class="table table-bordered table-striped table-sm">
 											<thead>
 												<tr>
 													<th>Name</th>
 													<th>Surname</th>
 													<th>Username</th>
 													<th>Email</th>
+													<th>Action</th>
 												</tr>
 											</thead>
 											<tbody>
@@ -97,13 +104,15 @@
 											$users_sql = "SELECT * FROM users WHERE user_perm='tech'";
 											$result_sql = $db-> query($users_sql);
 											if ($result_sql-> num_rows > 0) {
-												while ($row_sql = $result_sql->fetch_assoc()) {
-													echo "<tr>";
-													echo "<td>" . $row_sql["fname"] . "</td>";
-													echo "<td>" . $row_sql["lname"] . "</td>";
-													echo "<td>" . $row_sql["username"] . "</td>";
-													echo "<td>" . $row_sql["email"] . "</td>";
-													echo "</tr>";
+												while ($row_sql = $result_sql->fetch_assoc()) { ?>
+													<tr>
+														<td><?php echo $row_sql["fname"]; ?></td>
+														<td><?php echo $row_sql["lname"]; ?></td>
+														<td><?php echo $row_sql["username"]; ?></td>
+														<td><?php echo $row_sql["email"]; ?></td>
+														<td><a href="delete.php?delete=<?php echo $row_sql['id']; ?>">Delete</a></td>
+													</tr>
+													<?php
 												}
 											} else {
 
@@ -113,15 +122,16 @@
 										</table>
 									</div>
 
-									<h2 class="h4 mb-3">Users</h2>
+									<h3 class="h5 my-3">Users</h3>
 									<div class="table-responsive">
-										<table class="table table-bordered table-striped">
+										<table class="table table-bordered table-striped table-sm">
 											<thead>
 												<tr>
 													<th>Name</th>
 													<th>Surname</th>
 													<th>Username</th>
 													<th>Email</th>
+													<th>Action</th>
 												</tr>
 											</thead>
 											<tbody>
@@ -132,13 +142,15 @@
 											$users_sql = "SELECT * FROM users WHERE user_perm='user'";
 											$result_sql = $db-> query($users_sql);
 											if ($result_sql-> num_rows > 0) {
-												while ($row_sql = $result_sql->fetch_assoc()) {
-													echo "<tr>";
-													echo "<td>" . $row_sql["fname"] . "</td>";
-													echo "<td>" . $row_sql["lname"] . "</td>";
-													echo "<td>" . $row_sql["username"] . "</td>";
-													echo "<td>" . $row_sql["email"] . "</td>";
-													echo "</tr>";
+												while ($row_sql = $result_sql->fetch_assoc()) { ?>
+													<tr>
+														<td><?php echo $row_sql["fname"]; ?></td>
+														<td><?php echo $row_sql["lname"]; ?></td>
+														<td><?php echo $row_sql["username"]; ?></td>
+														<td><?php echo $row_sql["email"]; ?></td>
+														<td><a href="delete.php?delete=<?php echo $row_sql['id']; ?>">Delete</a></td>
+													</tr>
+													<?php
 												}
 											} else {
 
@@ -153,6 +165,7 @@
 								<div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
 
 									<h2 class="h4 mb-3">Create user</h2>
+									<hr>
 									<form action="settings.php" method="POST">
 
 										<?php include('inc/errors.php'); ?>
