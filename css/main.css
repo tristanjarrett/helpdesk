@@ -7611,7 +7611,7 @@ a {
     padding: 0; }
     .header ul.header_menu_left li {
       list-style-type: none;
-      margin-right: .5rem; }
+      margin-right: .75rem; }
   .header ul.header_menu_right {
     display: flex;
     align-items: center;
@@ -7619,7 +7619,7 @@ a {
     padding: 0; }
     .header ul.header_menu_right li {
       list-style-type: none;
-      margin-left: .5rem; }
+      margin-left: .75rem; }
 
 .brand {
   color: #666666;
@@ -7630,7 +7630,7 @@ a {
     width: auto; }
 
 main {
-  padding: 2rem 0; }
+  padding: 2.5rem 0; }
 
 .global_panel {
   padding: 1.5rem;

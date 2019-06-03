@@ -87,7 +87,7 @@
 			<?php
 			else :
 
-				header("location: new-ticket.php");
+				header("location: new-request.php");
 
 			endif
 			?>

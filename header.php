@@ -24,7 +24,7 @@
   <body>
 
     <header class="header">
-      <div class="container">
+      <div class="container-fluid">
 
         <div class="d-flex justify-content-between align-items-center">
 
@@ -40,7 +40,7 @@
               else :
               endif
               ?>
-              <li><a href="new-ticket.php">New Request</a></li>
+              <li><a href="new-request.php">New Request</a></li>
               <li><a href="my-requests.php">My Requests</a></li>
             </ul>
             <?php else : ?>
@@ -51,7 +51,7 @@
             <?php
             if (isset($_SESSION["my_id"])) : ?>
               <ul class="header_menu_right">
-                <li><strong><?php echo $_SESSION["my_fname"] . " " . $_SESSION["my_lname"]; ?></strong></li>
+                <li><?php echo $_SESSION["my_fname"] . " " . $_SESSION["my_lname"]; ?></li>
                 <li><a href="profile.php">Profile</a></li>
                   <?php
                   if ($_SESSION['my_user_perm'] == 'admin') :
