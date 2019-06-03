@@ -11,6 +11,11 @@ a {
   }
 }
 
+.page_title {
+  text-decoration: underline;
+  margin-bottom: 1rem;
+}
+
 .header {
   padding: 1rem 0;
   background-color: #323436;
@@ -50,26 +55,24 @@ a {
   }
 }
 
-main {
-  padding: 2.5rem 0;
-}
-
 .global_panel {
-  padding: 1.5rem;
   background-color: #ffffff;
-  border-radius: .25rem;
-  box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.1);
+  padding: 1rem 0;
 }
 
 .login_page,
 .register_page {
   .global_panel {
     max-width: 600px;
-    margin: 0 auto;
+    margin: 100px auto;
+    padding: 1.5rem;
+    background-color: #ffffff;
+    border-radius: .25rem;
+    box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.1);
   }
 }
 
 footer {
-  text-align: center;
+  text-align: right;
   padding: 1rem 0;
 }

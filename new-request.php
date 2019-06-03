@@ -17,14 +17,14 @@
 
     <main>
 
-			<div class="container">
+			<div class="global_panel">
 
-				<div class="global_panel">
+				<div class="container">
 
 					<?php echo $_SESSION['success']; ?>
 					<?php echo $_SESSION['error']; ?>
 
-					<h1 class="h3"><?php echo $pageTitle; ?></h1>
+					<h1 class="h4 page_title"><?php echo $pageTitle; ?></h1>
 
 					<form action="" method="POST">
 

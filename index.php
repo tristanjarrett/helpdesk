@@ -13,13 +13,12 @@
 ?>
 
 		<?php if ($_SESSION['my_user_perm'] == 'admin' || $_SESSION['my_user_perm'] == 'tech' ) : ?>
-			<main>
 
-				<div class="container">
+			<main class="global_panel">
 
-					<div class="global_panel">
+					<div class="container-fluid">
 
-						<h1 class="h3"><?php echo $pageTitle; ?></h1>
+						<h1 class="h4 page_title"><?php echo $pageTitle; ?></h1>
 
 						<div class="table-responsive">
 							<table class="table table-bordered table-striped">
@@ -78,8 +77,6 @@
 						</div>
 
 					</div>
-
-				</div>
 
 			</main>
 
