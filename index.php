@@ -48,6 +48,7 @@
 									while ($row_sql = $result_sql->fetch_assoc()) {
 
 										$user_id = $row_sql['logged_by'];
+										$logged_by_user_id = "";
 
 										// get Name by ID
 										$name_sql = "SELECT fname, lname FROM users WHERE id='".$user_id."'";
@@ -56,6 +57,8 @@
 											while ($id_sql = $return_sql->fetch_assoc()) {
 												$logged_by_user_id = $id_sql['fname'] . " " . $id_sql['lname'];
 											}
+										} else {
+											$logged_by_user_id = '<span style="color: red;">Deleted user</span>';
 										}
 										// end get Name by ID
 
