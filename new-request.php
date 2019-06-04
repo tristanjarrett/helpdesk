@@ -17,48 +17,48 @@
 
     <main>
 
-			<div class="container">
+			<div class="container-lg">
 
 				<div class="global_panel">
 
 					<?php echo $_SESSION['success']; ?>
 					<?php echo $_SESSION['error']; ?>
 
-					<h1 class="h4 page_title"><?php echo $pageTitle; ?></h1>
+					<h1 class="page_title"><?php echo $pageTitle; ?></h1>
 
 					<form action="" method="POST">
 
 						<?php include('inc/errors.php'); ?>
 
-						<div class="form-group">
+						<div class="">
 							<label>Call type</label>
-							<select class="form-control" name="type">
+							<select name="type">
 								<option value="Support" selected>Support</option>
 								<option value="Project">Project</option>
 							</select>
 						</div>
 
-						<div class="form-group">
+						<div class="">
 							<label>Priority</label>
-							<select class="form-control" name="priority">
+							<select name="priority">
 								<option value="Low" selected>Low</option>
 								<option value="Medium">Medium</option>
 								<option value="High">High</option>
 							</select>
 						</div>
 
-						<div class="form-group">
+						<div class="">
 							<label>Summary</label>
-							<input class="form-control" type="text" name="summary" placeholder="Summary">
+							<input type="text" name="summary" placeholder="Summary">
 						</div>
 
-						<div class="form-group">
+						<div class="">
 							<label>Description</label>
-							<textarea class="form-control" name="description" rows="10" placeholder="Detail your request"></textarea>
+							<textarea name="description" rows="10" placeholder="Detail your request"></textarea>
 						</div>
 
 						<div class="text-right">
-							<button class="btn btn-primary" type="submit" name="create_ticket" value="Submit">Submit</button>
+							<button class="button-md button-primary" type="submit" name="create_ticket" value="Submit">Submit</button>
 						</div>
 					</form>
 

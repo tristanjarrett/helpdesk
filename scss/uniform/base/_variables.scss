@@ -1,0 +1,43 @@
+// Colors
+
+$color-primary: #0086e6;
+$color-primary-hover: darken($color-primary, 10%);
+$color-secondary: #29de7d;
+$color-secondary-hover: darken($color-secondary, 10%);
+
+// Body Styles
+
+$body-txt: #444;
+$body-bg: #fff;
+
+// General Typography
+
+$font-family: sans-serif;
+$font-size: 1rem;
+$font-weight: normal;
+
+// Gutters
+
+$gutter-width: 1rem;
+
+// Screen Width
+
+$width-lg: 1200px;
+$width-md: 1000px;
+$width-sm: 800px;
+$width-xs: 600px;
+
+// Buttons
+
+$button-radius: .25rem;
+
+// Borders
+
+$border-style: solid;
+$border-width: 2px;
+$border-color: #e1e1e1;
+
+// Tables
+
+$table-padding: .75rem;
+$table-color: #ffffff;

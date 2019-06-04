@@ -1,3 +1,5 @@
+@import "uniform/uniform";
+
 html, body {
   background-color: #f7f7f9 !important;
 }
@@ -18,6 +20,11 @@ a {
   padding: 1rem 0;
   background-color: #323436;
   color: #ffffff !important;
+  .nav_flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
   a {
     color: #ffffff !important;
   }
@@ -73,5 +80,5 @@ main {
 }
 
 footer {
-  
+
 }

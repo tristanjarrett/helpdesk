@@ -1,0 +1,28 @@
+// Containers
+%container {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: $gutter-width;
+  padding-right: $gutter-width;
+}
+
+.container-xs {
+  @extend %container;
+  max-width: $width-xs;
+}
+.container-sm {
+  @extend %container;
+  max-width: $width-sm;
+}
+.container-md {
+  @extend %container;
+  max-width: $width-md;
+}
+.container-lg {
+  @extend %container;
+  max-width: $width-lg;
+}
+.container-full {
+  @extend %container;
+  max-width: 100%;
+}

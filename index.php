@@ -14,14 +14,14 @@
 
 		<?php if ($_SESSION['my_user_perm'] == 'admin' || $_SESSION['my_user_perm'] == 'tech' ) : ?>
 
-			<main class="container">
+			<main class="container-lg">
 
 					<div class="global_panel">
 
-						<h1 class="h4 page_title"><?php echo $pageTitle; ?></h1>
+						<h1 class="page_title"><?php echo $pageTitle; ?></h1>
 
-						<div class="table-responsive">
-							<table class="table table-bordered table-striped">
+						<div class="">
+							<table class="table-bordered table-striped">
 
 								<thead>
 									<tr>

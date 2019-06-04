@@ -1,0 +1,84 @@
+// Table general
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  max-width: 100%;
+  background-color: $table-color;
+}
+
+th,
+td {
+  text-align: left;
+  padding: $table-padding;
+}
+
+// Table heading
+thead th {
+  border-bottom: solid 2px $border-color;
+}
+
+// Table foot
+tfoot th {
+  border-top: solid 2px $border-color;
+}
+
+// Table data
+td {
+  border-bottom: solid 1px $border-color;
+}
+
+// Every odd row in the table body is a different color
+.table-striped {
+  tbody tr:nth-child(odd) {
+    background-color: darken($table-color, 5%);
+  }
+}
+
+// Remove horizontal padding to make the text go edge to edge
+.table-flush {
+  th,
+  td {
+    padding: $table-padding 0;
+  }
+}
+
+// Add a border around entire table & bewteen each heading & data cell
+.table-bordered {
+  border: solid 1px $border-color;
+  th,
+  td {
+    border-right: solid 1px $border-color;
+    padding: $table-padding !important;
+    &:last-child {
+      border-right: none;
+    }
+  }
+}
+
+// Add a border bewteen each heading & data cell
+.table-bordered-x {
+  th,
+  td {
+    border-right: solid 1px $border-color;
+    padding: $table-padding !important;
+    &:last-child {
+      border-right: none;
+    }
+  }
+}
+
+// Add a border to the top and bottom of table
+.table-bordered-y {
+  thead th {
+    border-top: solid 1px $border-color;
+  }
+  tfoot th {
+    border-bottom: solid 1px $border-color;
+  }
+}
+
+// Make table scroll horizontally
+.table-scroll {
+  overflow-x: auto;
+}
