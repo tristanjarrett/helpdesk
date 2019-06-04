@@ -31,7 +31,7 @@
 						<?php include('inc/errors.php'); ?>
 
 						<div class="form-group">
-							<label>Call Type</label>
+							<label>Call type</label>
 							<select class="form-control" name="type">
 								<option value="Support" selected>Support</option>
 								<option value="Project">Project</option>
