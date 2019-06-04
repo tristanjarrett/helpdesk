@@ -16,9 +16,5 @@
     "url": "https://github.com/tristanjarrett/helpdesk/issues"
   },
   "homepage": "https://github.com/tristanjarrett/helpdesk#readme",
-  "dependencies": {
-    "bootstrap": "^4.3.1",
-    "jquery": "^3.4.1",
-    "popper.js": "^1.15.0"
-  }
+  "dependencies": {}
 }
