@@ -14,7 +14,7 @@
 
 		<?php if ($_SESSION['my_user_perm'] == 'admin' || $_SESSION['my_user_perm'] == 'tech' ) : ?>
 
-			<main class="container-fluid">
+			<main class="container">
 
 					<div class="global_panel">
 

@@ -14,7 +14,7 @@
 
 			<main>
 
-				<div class="container-fluid">
+				<div class="container">
 
 					<div class="global_panel">
 

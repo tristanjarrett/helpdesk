@@ -18,7 +18,7 @@
 	<?php if ($_SESSION['my_user_perm'] == 'admin') : ?>
 		<main>
 
-			<div class="container-fluid">
+			<div class="container">
 
 				<div class="global_panel">
 
