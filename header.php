@@ -51,7 +51,7 @@
             <?php
             if (isset($_SESSION["my_id"])) : ?>
               <ul class="header_menu_right">
-                <li style="font-weight: bold;"><?php echo $_SESSION["my_fname"] . " " . $_SESSION["my_lname"]; ?></li>
+                <li><?php echo $_SESSION["my_fname"] . " " . $_SESSION["my_lname"]; ?></li>
                 <li><a href="profile.php">Profile</a></li>
                   <?php
                   if ($_SESSION['my_user_perm'] == 'admin') :

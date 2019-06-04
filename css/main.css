@@ -18,21 +18,14 @@ hr {
   overflow: visible;
 }
 
+button {
+  background: none;
+  border: none;
+}
+
 body {
   font-family: sans-serif;
   font-size: 1rem;
-  font-weight: normal;
-  color: #444;
-  background-color: #fff;
-}
-
-a {
-  color: #0086e6;
-  text-decoration: none;
-}
-a:hover {
-  color: #0068b3;
-  text-decoration: none;
 }
 
 .container-full, .container-lg, .container-md, .container-sm, .container-xs {
@@ -67,6 +60,7 @@ a:hover {
   text-decoration: none;
   display: inline-block;
   border: solid 2px transparent;
+  cursor: pointer;
 }
 .button-lg:hover, .button-md:hover, .button-sm:hover {
   text-decoration: none;
