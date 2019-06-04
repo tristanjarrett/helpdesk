@@ -44,18 +44,8 @@
 			$query = "INSERT INTO tickets (type, priority, timestamp, summary, description, logged_by) VALUES('$type', '$priority', '$timestamp', '$summary', '$description', '$logged_by')";
 			mysqli_query($db, $query);
 
-			$_SESSION['success'] = '<div class="alert alert-success">
-			<button type="button" class="close" data-dismiss="alert" aria-label="Close">
-			<span aria-hidden="true">&times;</span>
-			</button>
-			<span>New ticket created successfully</span>
-			</div>';
+			$_SESSION['success'] = '<span style="color: green;">New ticket created successfully</span>';
 		} else {
-			$_SESSION['error'] = '<div class="alert alert-danger">
-			<button type="button" class="close" data-dismiss="alert" aria-label="Close">
-			<span aria-hidden="true">&times;</span>
-			</button>
-			<span>Something went wrong</span>
-			</div>';
+			$_SESSION['error'] = '<span style="color: red;">Something went wrong</span>';
 		}
 	}

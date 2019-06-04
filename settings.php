@@ -27,15 +27,17 @@
 
 					<h1 class="page_title"><?php echo $pageTitle; ?></h1>
 
-					<h3 class="h5 my-3">Admins</h3>
-					<div class="table-responsive">
-						<table class="table table-bordered table-striped">
+					<h2>Users</h2>
+
+					<div class="">
+						<table class="table-bordered table-striped">
 							<thead>
 								<tr>
 									<th>Name</th>
 									<th>Surname</th>
 									<th>Username</th>
 									<th>Email</th>
+									<th>User level</th>
 									<th>Action</th>
 								</tr>
 							</thead>
@@ -44,7 +46,7 @@
 							if ($db-> connect_error) {
 								die("Connection failed:" . $db->connect_error);
 							}
-							$users_sql = "SELECT * FROM users WHERE user_perm='admin'";
+							$users_sql = "SELECT * FROM users";
 							$result_sql = $db-> query($users_sql);
 							if ($result_sql-> num_rows > 0) {
 								while ($row_sql = $result_sql->fetch_assoc()) { ?>
@@ -53,6 +55,7 @@
 										<td><?php echo $row_sql["lname"]; ?></td>
 										<td><?php echo $row_sql["username"]; ?></td>
 										<td><?php echo $row_sql["email"]; ?></td>
+										<td><?php echo $row_sql["user_perm"]; ?></td>
 										<td><a href="settings.php?delete=<?php echo $row_sql['id']; ?>" style="color: red;">Delete</a></td>
 									</tr>
 									<?php
@@ -65,7 +68,7 @@
 						</table>
 					</div>
 
-					<h2 class="h4 mb-3">Create user</h2>
+					<h2>Create user</h2>
 
 					<form action="settings.php" method="POST">
 

@@ -50,19 +50,9 @@
 				$password = md5($password);
 				$query = "INSERT INTO users (user_perm, username, fname, lname, email, password) VALUES('$user_perm', '$username', '$fname', '$lname', '$email', '$password')";
 				mysqli_query($db, $query);
-				$_SESSION['success'] = '<div class="alert alert-success">
-				<button type="button" class="close" data-dismiss="alert" aria-label="Close">
-				<span aria-hidden="true">&times;</span>
-				</button>
-				<span>New user created successfully</span>
-				</div>';
+				$_SESSION['success'] = '<span style="color: green;">New user created successfully</span>';
 			} else {
-				$_SESSION['error'] = '<div class="alert alert-danger">
-				<button type="button" class="close" data-dismiss="alert" aria-label="Close">
-				<span aria-hidden="true">&times;</span>
-				</button>
-				<span>Something went wrong</span>
-				</div>';
+				$_SESSION['error'] = '<span style="color: red;">Something went wrong</span>';
 			}
 		}
 
@@ -73,13 +63,8 @@
 			$id = $_GET['delete'];
 			$query = "DELETE FROM users WHERE id='$id'";
 			mysqli_query($db, $query);
-			$_SESSION['success'] = '<div class="alert alert-success">
-			<button type="button" class="close" data-dismiss="alert" aria-label="Close">
-			<span aria-hidden="true">&times;</span>
-			</button>
-			<span>User deleted successfully</span>
-			</div>';
+			$_SESSION['success'] = '<span style="color: green;">User deleted successfully</span>';
 		}
 
 	// end security
-} 
+}

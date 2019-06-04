@@ -42,12 +42,7 @@
 		if (count($errors) == 0) {
 			$query = "UPDATE users SET username='$username', email='$email', fname='$fname', lname='$lname' WHERE id='".$_SESSION['my_id']."'";
 			mysqli_query($db, $query);
-			$_SESSION['success'] = '<div class="alert alert-success">
-			<button type="button" class="close" data-dismiss="alert" aria-label="Close">
-			<span aria-hidden="true">&times;</span>
-			</button>
-			<span>Profile updated successfully</span>
-			</div>';
+			$_SESSION['success'] = '<span style="color: green;">Profile updated successfully</span>';
 
 			// get user info from database
 			$user_sql = "SELECT * from users WHERE id='".$_SESSION['my_id']."'";
@@ -64,12 +59,7 @@
 			}
 
 		} else {
-			$_SESSION['error'] = '<div class="alert alert-danger">
-			<button type="button" class="close" data-dismiss="alert" aria-label="Close">
-			<span aria-hidden="true">&times;</span>
-			</button>
-			<span>Something went wrong</span>
-			</div>';
+			$_SESSION['error'] = '<span style="color: red;">Something went wrong</span>';
 		}
 	}
 
@@ -103,12 +93,7 @@
 			$password = md5($password);
 			$query = "UPDATE users SET password='$password' WHERE id='".$_SESSION['my_id']."'";
 			mysqli_query($db, $query);
-			$_SESSION['success'] = '<div class="alert alert-success">
-			<button type="button" class="close" data-dismiss="alert" aria-label="Close">
-			<span aria-hidden="true">&times;</span>
-			</button>
-			<span>Password updated successfully</span>
-			</div>';
+			$_SESSION['success'] = '<span style="color: green;">Password updated successfully</span>';
 
 			// get user info from database
 			$user_sql = "SELECT * from users WHERE id='".$_SESSION['my_id']."'";
@@ -122,11 +107,6 @@
 			}
 
 		} else {
-			$_SESSION['error'] = '<div class="alert alert-danger">
-			<button type="button" class="close" data-dismiss="alert" aria-label="Close">
-			<span aria-hidden="true">&times;</span>
-			</button>
-			<span>Something went wrong</span>
-			</div>';
+			$_SESSION['error'] = '<span style="color: red;">Something went wrong</span>';
 		}
 	}
