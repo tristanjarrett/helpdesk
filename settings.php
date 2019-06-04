@@ -27,97 +27,124 @@
 
 					<h1 class="page_title"><?php echo $pageTitle; ?></h1>
 
-					<h2>Users</h2>
-
-					<div class="">
-						<table class="table-bordered table-striped">
-							<thead>
-								<tr>
-									<th>Name</th>
-									<th>Surname</th>
-									<th>Username</th>
-									<th>Email</th>
-									<th>User level</th>
-									<th>Action</th>
-								</tr>
-							</thead>
-							<tbody>
-							<?php
-							if ($db-> connect_error) {
-								die("Connection failed:" . $db->connect_error);
-							}
-							$users_sql = "SELECT * FROM users";
-							$result_sql = $db-> query($users_sql);
-							if ($result_sql-> num_rows > 0) {
-								while ($row_sql = $result_sql->fetch_assoc()) { ?>
-									<tr>
-										<td><?php echo $row_sql["fname"]; ?></td>
-										<td><?php echo $row_sql["lname"]; ?></td>
-										<td><?php echo $row_sql["username"]; ?></td>
-										<td><?php echo $row_sql["email"]; ?></td>
-										<td><?php echo $row_sql["user_perm"]; ?></td>
-										<td><a href="settings.php?delete=<?php echo $row_sql['id']; ?>" style="color: red;">Delete</a></td>
-									</tr>
-									<?php
-								}
-							} else {
-
-							}
-							?>
-							</tbody>
-						</table>
+					<div class="tab-menu">
+					  <button class="tab-link" onclick="openTab(event, 'users')" id="defaultOpen">Users</button>
+					  <button class="tab-link" onclick="openTab(event, 'new-user')">New user</button>
 					</div>
 
-					<h2>Create user</h2>
+					<div id="users" class="tab-content">
+						<h2>Users</h2>
 
-					<form action="settings.php" method="POST">
+						<div class="">
+							<table class="table-bordered table-striped">
+								<thead>
+									<tr>
+										<th>Name</th>
+										<th>Surname</th>
+										<th>Username</th>
+										<th>Email</th>
+										<th>User level</th>
+										<th>Action</th>
+									</tr>
+								</thead>
+								<tbody>
+								<?php
+								if ($db-> connect_error) {
+									die("Connection failed:" . $db->connect_error);
+								}
+								$users_sql = "SELECT * FROM users";
+								$result_sql = $db-> query($users_sql);
+								if ($result_sql-> num_rows > 0) {
+									while ($row_sql = $result_sql->fetch_assoc()) { ?>
+										<tr>
+											<td><?php echo $row_sql["fname"]; ?></td>
+											<td><?php echo $row_sql["lname"]; ?></td>
+											<td><?php echo $row_sql["username"]; ?></td>
+											<td><?php echo $row_sql["email"]; ?></td>
+											<td><?php echo $row_sql["user_perm"]; ?></td>
+											<td><a href="settings.php?delete=<?php echo $row_sql['id']; ?>" style="color: red;">Delete</a></td>
+										</tr>
+										<?php
+									}
+								} else {
 
-					  <?php include('inc/errors.php'); ?>
+								}
+								?>
+								</tbody>
+							</table>
+						</div>
+					</div>
 
-					  <div class="">
-					    <label>User level</label>
-					    <select class="" type="text" name="user_perm">
-					      <option value="user" selected>User</option>
-					      <option value="tech">Tech</option>
-					      <option value="admin">Admin</option>
-					    </select>
-					  </div>
+					<div id="new-user" class="tab-content">
+						<h2>New user</h2>
 
-					  <div class="">
-					    <label>Username</label>
-					    <input class="" type="text" name="username" placeholder="Username">
-					  </div>
+						<form action="settings.php" method="POST">
 
-					  <div class="">
-					    <label for="fname">Name</label>
-					    <input class="" type="text" name="fname" id="fname" placeholder="First name">
-					  </div>
+						  <?php include('inc/errors.php'); ?>
 
-					  <div class="">
-					    <label for="lname">Surname</label>
-					    <input class="" type="text" name="lname" id="lname" placeholder="Last name">
-					  </div>
+						  <div class="">
+						    <label>User level</label>
+						    <select class="" type="text" name="user_perm">
+						      <option value="user" selected>User</option>
+						      <option value="tech">Tech</option>
+						      <option value="admin">Admin</option>
+						    </select>
+						  </div>
 
-					  <div class="">
-					    <label>Email</label>
-					    <input class="" type="email" name="email" placeholder="Email">
-					  </div>
+						  <div class="">
+						    <label>Username</label>
+						    <input class="" type="text" name="username" placeholder="Username">
+						  </div>
 
-					  <div class="">
-					    <label>Password</label>
-					    <input class="" type="password" placeholder="Password" name="password">
-					  </div>
+						  <div class="">
+						    <label for="fname">Name</label>
+						    <input class="" type="text" name="fname" id="fname" placeholder="First name">
+						  </div>
 
-					  <div class="">
-					    <label>Verify password</label>
-					    <input class="" type="password" placeholder="Verify password" name="password_verify">
-					  </div>
+						  <div class="">
+						    <label for="lname">Surname</label>
+						    <input class="" type="text" name="lname" id="lname" placeholder="Last name">
+						  </div>
 
-					  <div class="text-right">
-					    <button class="button-md button-primary" type="submit" name="create_user">Create user</button>
-					  </div>
+						  <div class="">
+						    <label>Email</label>
+						    <input class="" type="email" name="email" placeholder="Email">
+						  </div>
 
-					</form>
+						  <div class="">
+						    <label>Password</label>
+						    <input class="" type="password" placeholder="Password" name="password">
+						  </div>
+
+						  <div class="">
+						    <label>Verify password</label>
+						    <input class="" type="password" placeholder="Verify password" name="password_verify">
+						  </div>
+
+						  <div class="text-right">
+						    <button class="button-md button-primary" type="submit" name="create_user">Create user</button>
+						  </div>
+
+						</form>
+					</div>
+
+					<script>
+					function openTab(evt, tabId) {
+					  var i, tabContent, tabLinks;
+					  tabContent = document.getElementsByClassName("tab-content");
+					  for (i = 0; i < tabContent.length; i++) {
+					    tabContent[i].style.display = "none";
+					  }
+					  tabLinks = document.getElementsByClassName("tab-button");
+					  for (i = 0; i < tabLinks.length; i++) {
+					    tabLinks[i].className = tabLinks[i].className.replace(" active", "");
+					  }
+					  document.getElementById(tabId).style.display = "block";
+					  evt.currentTarget.className += " active";
+					}
+
+					document.getElementById("defaultOpen").click();
+					</script>
 
 				</div>
 
