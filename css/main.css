@@ -28,6 +28,15 @@ body {
   font-size: 1rem;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0;
+}
+
 .container-full, .container-lg, .container-md, .container-sm, .container-xs {
   margin-left: auto;
   margin-right: auto;
@@ -201,15 +210,49 @@ td {
   overflow-x: auto;
 }
 
-html, body {
-  background-color: #f7f7f9 !important;
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 0.5rem 1rem;
+  border: solid 2px #e1e1e1;
+  border-radius: 0.25rem;
+  box-sizing: border-box;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+  resize: vertical;
+  font-size: 1rem;
+  font-family: sans-serif;
 }
 
-a {
-  color: #333;
+.tab-menu {
+  overflow: hidden;
+  background-color: #f1f1f1;
+  border: solid 1px #e1e1e1;
 }
-a:hover {
-  color: #000;
+
+.tab-link {
+  padding: 1rem;
+  font-size: 1rem;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  display: inline-block;
+  transition: 0.3s;
+}
+.tab-link:hover {
+  background-color: #ddd;
+}
+
+.tab-content {
+  display: none;
+  padding: 1rem;
+  border: solid 1px #e1e1e1;
+  border-top: none;
+}
+
+html, body {
+  background-color: #f7f7f9 !important;
 }
 
 .page_title {
@@ -276,32 +319,6 @@ a:hover {
 
 main {
   padding: 1rem 0;
-}
-
-.tab-menu {
-  overflow: hidden;
-  background-color: #f1f1f1;
-  border: solid 1px #e1e1e1;
-}
-
-.tab-link {
-  padding: 1rem;
-  font-size: 1rem;
-  border: none;
-  outline: none;
-  cursor: pointer;
-  display: inline-block;
-  transition: 0.3s;
-}
-.tab-link:hover {
-  background-color: #ddd;
-}
-
-.tab-content {
-  display: none;
-  padding: 1rem;
-  border: solid 1px #e1e1e1;
-  border-top: none;
 }
 
 /*# sourceMappingURL=main.css.map */

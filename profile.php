@@ -33,7 +33,7 @@
 
 					<div id="details" class="tab-content">
 						<h2>Edit details</h2>
-						
+
 						<form action="" method="POST">
 
 							<?php include('inc/errors.php'); ?>

@@ -4,13 +4,6 @@ html, body {
   background-color: #f7f7f9 !important;
 }
 
-a {
-  color: #333;
-  &:hover {
-    color: #000;
-  }
-}
-
 .page_title {
   text-decoration: underline;
   margin-bottom: 1rem;
@@ -81,35 +74,4 @@ main {
 
 footer {
 
-}
-
-
-
-
-
-
-.tab-menu {
-  overflow: hidden;
-  background-color: #f1f1f1;
-  border: solid 1px #e1e1e1;
-}
-
-.tab-link {
-  padding: 1rem;
-  font-size: 1rem;
-  border: none;
-  outline: none;
-  cursor: pointer;
-  display: inline-block;
-  transition: 0.3s;
-  &:hover {
-    background-color: #ddd;
-  }
-}
-
-.tab-content {
-  display: none;
-  padding: 1rem;
-  border: solid 1px #e1e1e1;
-  border-top: none;
 }
