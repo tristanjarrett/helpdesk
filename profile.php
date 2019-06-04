@@ -55,7 +55,7 @@
 
 							<div class="">
 								<label>Email</label>
-								<input class="" type="text" name="email" placeholder="Email" value="<?php echo $_SESSION['my_email']; ?>">
+								<input class="" type="email" name="email" placeholder="Email" value="<?php echo $_SESSION['my_email']; ?>">
 							</div>
 
 							<div class="text-right">

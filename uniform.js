@@ -1,3 +1,4 @@
+// tabs
 function openTab(evt, tabId) {
   var i, tabContent, tabLinks;
   tabContent = document.getElementsByClassName("tab-content");
@@ -12,4 +13,5 @@ function openTab(evt, tabId) {
   evt.currentTarget.className += " active";
 }
 
+// default tab
 document.getElementById("defaultOpen").click();
