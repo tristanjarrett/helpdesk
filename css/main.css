@@ -7598,13 +7598,6 @@ a {
   a:hover {
     color: #000; }
 
-.fixed_sidebar {
-  height: 100vh;
-  position: sticky;
-  top: 0;
-  background-color: #4b4e50;
-  color: #ffffff; }
-
 .page_title {
   text-decoration: underline;
   margin-bottom: 1rem; }
