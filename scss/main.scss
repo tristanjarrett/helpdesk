@@ -10,7 +10,7 @@ html, body {
 }
 
 .header {
-  padding: 1rem 0;
+  padding: .5rem 0;
   background-color: #323436;
   color: #ffffff !important;
   .nav_flex {
@@ -19,7 +19,11 @@ html, body {
     justify-content: space-between;
   }
   a {
-    color: #ffffff !important;
+    color: #ffffff;
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
   }
   ul.header_menu_left {
     display: flex;
@@ -69,7 +73,7 @@ html, body {
 }
 
 main {
-  padding: 1rem 0;
+  padding: 2rem 0;
 }
 
 footer {

@@ -2,7 +2,7 @@
 
 %button {
   border-radius: $button-radius;
-  text-decoration: none;
+  text-decoration: none !important;
   display: inline-block;
   border: $border-style $border-width transparent;
   cursor: pointer;
@@ -34,12 +34,12 @@
 // Button Colors
 
 .button-primary {
-  background-color: none;
-  color: $color-primary;
+  background-color: $color-primary;
+  color: #fff;
   border-color: $color-primary;
   &:hover {
     color: #fff;
-    background-color: $color-primary;
-    border-color: $color-primary;
+    background-color: darken($color-primary, 10%);
+    border-color: darken($color-primary, 10%);
   }
 }
