@@ -38,11 +38,10 @@
 			array_push($errors, "Last name is required");
 		}
 
-		// create user if there are no errors in the form
+		// update user if there are no errors in the form
 		if (count($errors) == 0) {
 			$query = "UPDATE users SET username='$username', email='$email', fname='$fname', lname='$lname' WHERE id='".$_SESSION['my_id']."'";
 			mysqli_query($db, $query);
-			$_SESSION['success'] = '<span style="color: green;">Profile updated successfully</span>';
 
 			// get user info from database
 			$user_sql = "SELECT * from users WHERE id='".$_SESSION['my_id']."'";
@@ -57,6 +56,8 @@
 					$_SESSION['my_lname'] = $row_sql["lname"];
 				}
 			}
+
+			$_SESSION['success'] = '<span style="color: green;">Profile updated successfully</span>';
 
 		} else {
 			$_SESSION['error'] = '<span style="color: red;">Something went wrong</span>';
