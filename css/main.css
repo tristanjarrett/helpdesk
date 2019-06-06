@@ -311,6 +311,7 @@ html, body {
 .brand img {
   height: 2rem;
   width: auto;
+  display: block;
 }
 
 .global_panel {
