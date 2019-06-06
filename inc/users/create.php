@@ -60,10 +60,18 @@
 		 * delete user
 		 */
 		if (isset($_GET['delete'])) {
+
 			$id = $_GET['delete'];
-			$query = "DELETE FROM users WHERE id='$id'";
-			mysqli_query($db, $query);
-			$_SESSION['success'] = '<span style="color: green;">User deleted successfully</span>';
+
+			// allow delete if not self
+			if ($_SESSION['my_id'] == $id) {
+				$_SESSION['error'] = '<span style="color: red;">You cannot delete yourself!</span>';
+			} else {
+				$query = "DELETE FROM users WHERE id='$id'";
+				mysqli_query($db, $query);
+				$_SESSION['success'] = '<span style="color: green;">User deleted successfully</span>';
+			}
+
 		}
 
 	// end security
