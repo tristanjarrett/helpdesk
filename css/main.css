@@ -226,6 +226,13 @@ textarea {
   font-size: 1rem;
   font-family: sans-serif;
 }
+input[type=text]:focus,
+input[type=password]:focus,
+input[type=email]:focus,
+select:focus,
+textarea:focus {
+  border-color: #0086e6;
+}
 
 .tab-menu {
   overflow: hidden;
