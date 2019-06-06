@@ -239,8 +239,6 @@ textarea {
   border: none;
   outline: none;
   cursor: pointer;
-  display: inline-block;
-  transition: 0.3s;
 }
 .tab-link:hover {
   background-color: #ddd;
@@ -301,6 +299,9 @@ html, body {
 .header ul.header_menu_right li {
   list-style-type: none;
   margin-left: 0.75rem;
+}
+.header ul.header_menu_right .display_name {
+  font-weight: bold;
 }
 
 .brand {

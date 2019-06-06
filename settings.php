@@ -28,8 +28,8 @@
 					<h1 class="page_title"><?php echo $pageTitle; ?></h1>
 
 					<div class="tab-menu">
-					  <button class="tab-link" onclick="openTab(event, 'users')" id="defaultOpen">Users</button>
-					  <button class="tab-link" onclick="openTab(event, 'new-user')">New user</button>
+					  <button class="tab-link" onclick="openTab(event, 'users')" id="defaultOpen">Users</button><!--
+					--><button class="tab-link" onclick="openTab(event, 'new-user')">New user</button>
 					</div>
 
 					<div id="users" class="tab-content">
