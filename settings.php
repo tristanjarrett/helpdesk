@@ -55,14 +55,24 @@
 								$users_sql = "SELECT * FROM users";
 								$result_sql = $db-> query($users_sql);
 								if ($result_sql-> num_rows > 0) {
-									while ($row_sql = $result_sql->fetch_assoc()) { ?>
+									while ($row_sql = $result_sql->fetch_assoc()) {
+
+										// disable delete button if self
+										if ($_SESSION['my_id'] == $row_sql['id']) {
+											$del_not_self = '<span style="color: #999;">Delete</span>';
+										} else {
+											$id = $row_sql['id'];
+											$del_not_self = '<a href="settings.php?delete='.$id.'" style="color: red;">Delete</a>';
+										}
+
+										?>
 										<tr>
 											<td><?php echo $row_sql["fname"]; ?></td>
 											<td><?php echo $row_sql["lname"]; ?></td>
 											<td><?php echo $row_sql["username"]; ?></td>
 											<td><?php echo $row_sql["email"]; ?></td>
 											<td><?php echo $row_sql["user_perm"]; ?></td>
-											<td><a href="settings.php?delete=<?php echo $row_sql['id']; ?>" style="color: red;">Delete</a></td>
+											<td><?php echo $del_not_self; ?></td>
 										</tr>
 										<?php
 									}
