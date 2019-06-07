@@ -38,8 +38,8 @@
   color: #fff;
   border-color: $color-primary;
   &:hover {
-    color: #fff;
     background-color: darken($color-primary, 10%);
+    color: #fff;
     border-color: darken($color-primary, 10%);
   }
 }

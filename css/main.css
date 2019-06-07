@@ -422,8 +422,8 @@ a:hover {
   border-color: #0086e6;
 }
 .button-primary:hover {
-  color: #fff;
   background-color: #0068b3;
+  color: #fff;
   border-color: #0068b3;
 }
 
