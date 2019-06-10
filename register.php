@@ -2,6 +2,11 @@
 	$pageTitle = 'Register';
 	include 'header.php';
 
+	// redirect to index if logged in
+	if (isset($_SESSION["my_id"])) {
+		header("location: index.php");
+	}
+
 	// register script (after header)
 	include 'inc/users/register.php';
 ?>
