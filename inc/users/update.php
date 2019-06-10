@@ -30,14 +30,6 @@
 			array_push($errors, "Email is required");
 		}
 
-		if (empty($fname)) {
-			array_push($errors, "First name is required");
-		}
-
-		if (empty($lname)) {
-			array_push($errors, "Last name is required");
-		}
-
 		// update user if there are no errors in the form
 		if (count($errors) == 0) {
 			$query = "UPDATE users SET username='$username', email='$email', fname='$fname', lname='$lname' WHERE id='".$_SESSION['my_id']."'";
