@@ -51,11 +51,17 @@
 										$logged_by_user_id = "";
 
 										// get Name by ID
-										$name_sql = "SELECT fname, lname FROM users WHERE id='".$user_id."'";
+										$name_sql = "SELECT fname, lname, email FROM users WHERE id='".$user_id."'";
 										$return_sql = $db-> query($name_sql);
 										if ($return_sql-> num_rows > 0) {
 											while ($id_sql = $return_sql->fetch_assoc()) {
-												$logged_by_user_id = $id_sql['fname'] . " " . $id_sql['lname'];
+
+												if ($id_sql['fname'] && $id_sql['lname'] != null) {
+													$logged_by_user_id = $id_sql['fname'] . " " . $id_sql['lname'];
+												} else {
+													$logged_by_user_id = $id_sql['email'];
+												}
+
 											}
 										} else {
 											$logged_by_user_id = '<span style="color: red;">User deleted</span>';
