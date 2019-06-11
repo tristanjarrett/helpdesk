@@ -10,6 +10,7 @@
 	}
 
   require './inc/config/database.php';
+  require './inc/functions.php';
 
   $siteTitle = 'Helpdesk';
 ?>
@@ -51,7 +52,7 @@
             <?php
             if (isset($_SESSION["my_id"])) : ?>
               <ul class="header_menu_right">
-                <li class="display_name"><?php echo $_SESSION["my_fname"] . " " . $_SESSION["my_lname"]; ?></li>
+                <li class="display_name"><?php echo displayName(); ?></li>
                 <li><a href="profile.php">Profile</a></li>
                   <?php
                   if ($_SESSION['my_user_perm'] == 'admin') :
