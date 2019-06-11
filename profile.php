@@ -27,8 +27,8 @@
 					<h1 class="page_title"><?php echo $pageTitle; ?></h1>
 
 					<div class="tab-menu">
-					  <button class="tab-link" onclick="openTab(event, 'details')" id="defaultOpen">Details</button><!--
-					--><button class="tab-link" onclick="openTab(event, 'password')">Password</button>
+					  <button class="tab-link" onclick="openTab(event, 'details')" id="defaultOpen">Edit details</button><!--
+					--><button class="tab-link" onclick="openTab(event, 'password')">Change password</button>
 					</div>
 
 					<div id="details" class="tab-content">
