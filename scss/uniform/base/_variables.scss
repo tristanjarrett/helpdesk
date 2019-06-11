@@ -5,6 +5,9 @@ $color-primary-hover: darken($color-primary, 10%);
 $color-secondary: #29de7d;
 $color-secondary-hover: darken($color-secondary, 10%);
 
+// Border styles
+$border-radius: .25rem;
+
 // General Typography
 
 $font-family: sans-serif;
@@ -21,17 +24,13 @@ $width-md: 1000px;
 $width-sm: 800px;
 $width-xs: 600px;
 
-// Buttons
-
-$border-radius: .25rem;
-
 // Borders
 
 $border-style: solid;
 $border-width: 2px;
-$border-color: #e1e1e1;
+$border-color: #ced3d8;
 
 // Tables
 
-$table-padding: .75rem;
+$table-padding: .65rem;
 $table-color: #ffffff;

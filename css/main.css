@@ -478,19 +478,19 @@ table {
 th,
 td {
   text-align: left;
-  padding: 0.75rem;
+  padding: 0.65rem;
 }
 
 thead th {
-  border-bottom: solid 2px #e1e1e1;
+  border-bottom: solid 2px #ced3d8;
 }
 
 tfoot th {
-  border-top: solid 2px #e1e1e1;
+  border-top: solid 2px #ced3d8;
 }
 
 td {
-  border-bottom: solid 1px #e1e1e1;
+  border-bottom: solid 1px #ced3d8;
 }
 
 .table-striped tbody tr:nth-child(odd) {
@@ -499,16 +499,16 @@ td {
 
 .table-flush th,
 .table-flush td {
-  padding: 0.75rem 0;
+  padding: 0.65rem 0;
 }
 
 .table-bordered {
-  border: solid 1px #e1e1e1;
+  border: solid 1px #ced3d8;
 }
 .table-bordered th,
 .table-bordered td {
-  border-right: solid 1px #e1e1e1;
-  padding: 0.75rem !important;
+  border-right: solid 1px #ced3d8;
+  padding: 0.65rem !important;
 }
 .table-bordered th:last-child,
 .table-bordered td:last-child {
@@ -517,8 +517,8 @@ td {
 
 .table-bordered-x th,
 .table-bordered-x td {
-  border-right: solid 1px #e1e1e1;
-  padding: 0.75rem !important;
+  border-right: solid 1px #ced3d8;
+  padding: 0.65rem !important;
 }
 .table-bordered-x th:last-child,
 .table-bordered-x td:last-child {
@@ -526,10 +526,10 @@ td {
 }
 
 .table-bordered-y thead th {
-  border-top: solid 1px #e1e1e1;
+  border-top: solid 1px #ced3d8;
 }
 .table-bordered-y tfoot th {
-  border-bottom: solid 1px #e1e1e1;
+  border-bottom: solid 1px #ced3d8;
 }
 
 .table-scroll {
@@ -543,7 +543,7 @@ select,
 textarea {
   width: 100%;
   padding: 0.5rem 1rem;
-  border: solid 2px #e1e1e1;
+  border: solid 2px #ced3d8;
   border-radius: 0.25rem;
   box-sizing: border-box;
   margin-top: 0.5rem;
@@ -551,6 +551,7 @@ textarea {
   resize: vertical;
   font-size: 1rem;
   font-family: sans-serif;
+  color: #666;
 }
 input[type=text]:focus,
 input[type=password]:focus,
@@ -558,7 +559,7 @@ input[type=email]:focus,
 select:focus,
 textarea:focus {
   border-color: #0086e6;
-  box-shadow: 0 0 3px #4db5ff;
+  box-shadow: 0 0 5px #4db5ff;
 }
 
 .tab-menu {
