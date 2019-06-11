@@ -3,7 +3,8 @@
   // Display logged in users full name or email if name = null
   function displayName() {
 
-    require './inc/config/database.php';
+    // call the database variable
+    global $db;
 
     $sql = "SELECT * from users WHERE id='".$_SESSION['my_id']."'";
     $result = $db-> query($sql);
