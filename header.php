@@ -52,7 +52,7 @@
             <?php
             if (isset($_SESSION["my_id"])) : ?>
               <ul class="header_menu_right">
-                <li class="display_name"><?php echo displayName(); ?></li>
+                <li class="display_name"><?php displayName(); ?></li>
                 <li><a href="profile.php">Profile</a></li>
                   <?php
                   if ($_SESSION['my_user_perm'] == 'admin') :
