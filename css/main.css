@@ -546,9 +546,9 @@ textarea {
   border: solid 2px #ced3d8;
   border-radius: 0.25rem;
   box-sizing: border-box;
-  margin-top: 0.5rem;
-  margin-bottom: 1rem;
   resize: vertical;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
   font-size: 1rem;
   font-family: sans-serif;
   color: #666;
@@ -560,6 +560,10 @@ select:focus,
 textarea:focus {
   border-color: #0086e6;
   box-shadow: 0 0 5px #4db5ff;
+}
+
+.input-group {
+  margin-bottom: 1rem;
 }
 
 .tab-menu {
@@ -591,6 +595,10 @@ textarea:focus {
 
 html, body {
   background-color: #f7f7f9 !important;
+}
+
+.error {
+  color: red;
 }
 
 .page_title {

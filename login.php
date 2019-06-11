@@ -22,14 +22,12 @@
 
 					<form action="" method="POST">
 
-						<?php include('inc/errors.php'); ?>
-
-						<div class="">
+						<div class="input-group">
 							<label for="username">Username</label>
 							<input class="" name="username" type="text" id="username" placeholder="Username">
 						</div>
 
-						<div class="">
+						<div class="input-group">
 							<label for="password">Password</label>
 							<input class="" name="password" type="password" id="password" placeholder="Password">
 						</div>

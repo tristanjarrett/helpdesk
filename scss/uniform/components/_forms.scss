@@ -8,9 +8,9 @@ textarea {
   border: $border-style $border-width $border-color;
   border-radius: $border-radius;
   box-sizing: border-box;
-  margin-top: .5rem;
-  margin-bottom: 1rem;
   resize: vertical;
+  margin-top: .5rem;
+  margin-bottom: .5rem;
   font-size: 1rem;
   font-family: $font-family;
   color: #666;
@@ -18,4 +18,8 @@ textarea {
     border-color: $color-primary;
     box-shadow: 0 0 5px lighten($color-primary, 20%);
   }
+}
+
+.input-group {
+  margin-bottom: 1rem;
 }
