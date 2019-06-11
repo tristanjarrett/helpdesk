@@ -558,6 +558,7 @@ input[type=email]:focus,
 select:focus,
 textarea:focus {
   border-color: #0086e6;
+  box-shadow: 0 0 3px #4db5ff;
 }
 
 .tab-menu {
