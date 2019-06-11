@@ -81,7 +81,7 @@
 			array_push($errors, "The two passwords do not match");
 		}
 
-		// create user if there are no errors in the form
+		// update password if there are no errors in the form
 		if (count($errors) == 0) {
 			$password = md5($password);
 			$query = "UPDATE users SET password='$password' WHERE id='".$_SESSION['my_id']."'";
