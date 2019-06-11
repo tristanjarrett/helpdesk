@@ -13,6 +13,9 @@
   &:hover {
     background-color: #ddd;
   }
+  &.active {
+    background-color: red;
+  }
 }
 
 .tab-content {

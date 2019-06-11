@@ -576,6 +576,9 @@ textarea:focus {
 .tab-link:hover {
   background-color: #ddd;
 }
+.tab-link.active {
+  background-color: red;
+}
 
 .tab-content {
   display: none;
