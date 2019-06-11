@@ -571,18 +571,19 @@ textarea:focus {
   background-color: #f1f1f1;
   border: solid 1px #e1e1e1;
 }
-
-.tab-link {
+.tab-menu .tab-link {
   padding: 1rem;
   font-size: 1rem;
   border: none;
   outline: none;
   cursor: pointer;
+  font-weight: bold;
+  color: #333;
 }
-.tab-link:hover {
+.tab-menu .tab-link:hover {
   background-color: #ddd;
 }
-.tab-link.active {
+.tab-menu .tab-link.active {
   background-color: #ccc;
 }
 
