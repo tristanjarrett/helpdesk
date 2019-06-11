@@ -577,7 +577,7 @@ textarea:focus {
   background-color: #ddd;
 }
 .tab-link.active {
-  background-color: red;
+  background-color: #ccc;
 }
 
 .tab-content {
