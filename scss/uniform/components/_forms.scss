@@ -9,17 +9,19 @@ textarea {
   border-radius: $border-radius;
   box-sizing: border-box;
   resize: vertical;
-  margin-top: .5rem;
-  margin-bottom: .5rem;
   font-size: 1rem;
   font-family: $font-family;
   color: #666;
   &:focus {
     border-color: $color-primary;
-    box-shadow: 0 0 5px lighten($color-primary, 20%);
+    box-shadow: 0 0 5px lighten($color-primary, 15%);
   }
 }
 
 .input-group {
   margin-bottom: 1rem;
+  label {
+    display: inline-block;
+    margin-bottom: .5rem;
+  }
 }

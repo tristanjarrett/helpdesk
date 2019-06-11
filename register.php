@@ -23,32 +23,32 @@
 
 						<?php include('inc/errors.php'); ?>
 
-						<div class="">
+						<div class="input-group">
 							<label for="username">Username</label>
 							<input class="" type="text" name="username" id="username" placeholder="Username">
 						</div>
 
-						<div class="">
+						<div class="input-group">
 							<label for="fname">First name</label>
 							<input class="" type="text" name="fname" id="fname" placeholder="First name">
 						</div>
 
-						<div class="">
+						<div class="input-group">
 							<label for="lname">Last name</label>
 							<input class="" type="text" name="lname" id="lname" placeholder="Last name">
 						</div>
 
-						<div class="">
+						<div class="input-group">
 							<label for="email">Email</label>
 							<input class="" type="email" name="email" id="email" placeholder="Email">
 						</div>
 
-						<div class="">
+						<div class="input-group">
 							<label for="password">Password</label>
 							<input class="" type="password" name="password" id="password" placeholder="Password">
 						</div>
 
-						<div class="">
+						<div class="input-group">
 							<label for="password_verify">Verify Password</label>
 							<input class="" type="password" name="password_verify" id="password_verify" placeholder="Verify Password">
 						</div>

@@ -92,7 +92,7 @@
 
 						  <?php include('inc/errors.php'); ?>
 
-						  <div class="">
+						  <div class="input-group">
 						    <label>User level</label>
 						    <select class="" type="text" name="user_perm">
 						      <option value="user" selected>User</option>
@@ -101,32 +101,32 @@
 						    </select>
 						  </div>
 
-						  <div class="">
+						  <div class="input-group">
 						    <label>Username</label>
 						    <input class="" type="text" name="username" placeholder="Username">
 						  </div>
 
-						  <div class="">
+						  <div class="input-group">
 						    <label for="fname">Name</label>
 						    <input class="" type="text" name="fname" id="fname" placeholder="First name">
 						  </div>
 
-						  <div class="">
+						  <div class="input-group">
 						    <label for="lname">Surname</label>
 						    <input class="" type="text" name="lname" id="lname" placeholder="Last name">
 						  </div>
 
-						  <div class="">
+						  <div class="input-group">
 						    <label>Email</label>
 						    <input class="" type="email" name="email" placeholder="Email">
 						  </div>
 
-						  <div class="">
+						  <div class="input-group">
 						    <label>Password</label>
 						    <input class="" type="password" placeholder="Password" name="password">
 						  </div>
 
-						  <div class="">
+						  <div class="input-group">
 						    <label>Verify password</label>
 						    <input class="" type="password" placeholder="Verify password" name="password_verify">
 						  </div>

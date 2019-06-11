@@ -30,7 +30,7 @@
 
 						<?php include('inc/errors.php'); ?>
 
-						<div class="">
+						<div class="input-group">
 							<label>Call type</label>
 							<select name="type">
 								<option value="Support" selected>Support</option>
@@ -38,7 +38,7 @@
 							</select>
 						</div>
 
-						<div class="">
+						<div class="input-group">
 							<label>Priority</label>
 							<select name="priority">
 								<option value="Low" selected>Low</option>
@@ -47,12 +47,12 @@
 							</select>
 						</div>
 
-						<div class="">
+						<div class="input-group">
 							<label>Summary</label>
 							<input type="text" name="summary" placeholder="Summary">
 						</div>
 
-						<div class="">
+						<div class="input-group">
 							<label>Description</label>
 							<textarea name="description" rows="10" placeholder="Detail your request"></textarea>
 						</div>

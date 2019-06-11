@@ -38,22 +38,22 @@
 
 							<?php include('inc/errors.php'); ?>
 
-							<div class="">
+							<div class="input-group">
 								<label>Username</label>
 								<input class="" type="text" name="username" placeholder="Username" value="<?php echo $_SESSION['my_username']; ?>">
 							</div>
 
-							<div class="">
+							<div class="input-group">
 								<label>Name</label>
 								<input class="" type="text" name="fname" placeholder="Name" value="<?php echo $_SESSION['my_fname']; ?>">
 							</div>
 
-							<div class="">
+							<div class="input-group">
 								<label>Surname</label>
 								<input class="" type="text" name="lname" placeholder="Surname" value="<?php echo $_SESSION['my_lname']; ?>">
 							</div>
 
-							<div class="">
+							<div class="input-group">
 								<label>Email</label>
 								<input class="" type="email" name="email" placeholder="Email" value="<?php echo $_SESSION['my_email']; ?>">
 							</div>
@@ -72,21 +72,19 @@
 
 							<?php include('inc/errors.php'); ?>
 
-							<div class="">
+							<div class="input-group">
 								<label>Old password</label>
 								<input class="" type="password" placeholder="Old password" name="password_old">
 							</div>
 
-							<div class="form-row">
-								<div class=" col-md">
-									<label>New password</label>
-									<input class="" type="password" placeholder="New password" name="password">
-								</div>
+							<div class="input-group">
+								<label>New password</label>
+								<input class="" type="password" placeholder="New password" name="password">
+							</div>
 
-								<div class=" col-md">
-									<label>Verify password</label>
-									<input class="" type="password" placeholder="Verify password" name="password_verify">
-								</div>
+							<div class="input-group">
+								<label>Verify password</label>
+								<input class="" type="password" placeholder="Verify password" name="password_verify">
 							</div>
 
 							<div class="text-right">
