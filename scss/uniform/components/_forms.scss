@@ -23,5 +23,8 @@ textarea {
   label {
     display: inline-block;
     margin-bottom: .5rem;
+    &:after {
+      content: ':';
+    }
   }
 }

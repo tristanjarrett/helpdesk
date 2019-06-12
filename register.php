@@ -49,8 +49,8 @@
 						</div>
 
 						<div class="input-group">
-							<label for="password_verify">Verify Password</label>
-							<input class="" type="password" name="password_verify" id="password_verify" placeholder="Verify Password">
+							<label for="password_verify">Verify password</label>
+							<input class="" type="password" name="password_verify" id="password_verify" placeholder="Verify password">
 						</div>
 
 						<div class="text-right">

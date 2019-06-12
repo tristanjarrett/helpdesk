@@ -567,6 +567,9 @@ textarea:focus {
   display: inline-block;
   margin-bottom: 0.5rem;
 }
+.input-group label:after {
+  content: ":";
+}
 
 .tab-menu {
   overflow: hidden;
