@@ -1,0 +1,8 @@
+// invert color on background
+@function switch($color) {
+  @if (lightness($color) > 50) {
+    @return #000000; // return dark color on light background
+  } @else {
+    @return #ffffff; // return light color on dark background
+  }
+}

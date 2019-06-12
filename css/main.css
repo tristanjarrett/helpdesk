@@ -418,12 +418,12 @@ a:hover {
 
 .button-primary {
   background-color: #0086e6;
-  color: #fff;
+  color: #ffffff !important;
   border-color: #0086e6;
 }
 .button-primary:hover {
   background-color: #0068b3;
-  color: #fff;
+  color: #ffffff !important;
   border-color: #0068b3;
 }
 
@@ -557,7 +557,7 @@ input[type=email]:focus,
 select:focus,
 textarea:focus {
   border-color: #0086e6;
-  box-shadow: 0 0 5px #34aaff;
+  box-shadow: 0 0 2px 1px #b3dfff inset, 0 0 2px 1px #b3dfff;
 }
 
 .input-group {
