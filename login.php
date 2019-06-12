@@ -22,6 +22,8 @@
 
 					<form action="" method="POST">
 
+						<?php include('inc/errors.php'); ?>
+
 						<div class="input-group">
 							<label for="username">Username</label>
 							<input class="" name="username" type="text" id="username" placeholder="Username">
