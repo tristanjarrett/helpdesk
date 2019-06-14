@@ -584,12 +584,13 @@ textarea:focus {
   cursor: pointer;
   font-weight: bold;
   color: #333;
-}
-.tab-menu .tab-link:hover {
-  background-color: #ddd;
+  background-color: #f1f1f1;
 }
 .tab-menu .tab-link.active {
-  background-color: #ccc;
+  background-color: #e4e4e4;
+}
+.tab-menu .tab-link:hover {
+  background-color: #d8d8d8;
 }
 
 .tab-content {

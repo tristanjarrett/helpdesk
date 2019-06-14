@@ -1,6 +1,8 @@
+$tab-bg: #f1f1f1;
+
 .tab-menu {
   overflow: hidden;
-  background-color: #f1f1f1;
+  background-color: $tab-bg;
   border: solid 1px #e1e1e1;
   .tab-link {
     padding: 1rem;
@@ -10,11 +12,12 @@
     cursor: pointer;
     font-weight: bold;
     color: #333;
-    &:hover {
-      background-color: #ddd;
-    }
+    background-color: $tab-bg;
     &.active {
-      background-color: #ccc;
+      background-color: darken($tab-bg, 5%);
+    }
+    &:hover {
+      background-color: darken($tab-bg, 10%);
     }
   }
 }
