@@ -357,11 +357,11 @@ h6 {
 }
 
 a {
-  color: #0086e6;
+  color: #0056b3;
   text-decoration: none;
 }
 a:hover {
-  color: #0068b3;
+  color: #003d80;
   text-decoration: underline;
 }
 
@@ -398,6 +398,7 @@ a:hover {
   display: inline-block;
   border: solid 1px transparent;
   cursor: pointer;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 .button-lg:hover, .button-md:hover, .button-sm:hover {
   text-decoration: none;
@@ -419,14 +420,14 @@ a:hover {
 }
 
 .button-primary {
-  background-color: #0086e6;
+  background-color: #0056b3;
   color: #ffffff !important;
-  border-color: #0086e6;
+  border-color: #0056b3;
 }
 .button-primary:hover {
-  background-color: #0068b3;
+  background-color: #003d80;
   color: #ffffff !important;
-  border-color: #0068b3;
+  border-color: #003d80;
 }
 
 .float-left {
@@ -558,8 +559,8 @@ input[type=password]:focus,
 input[type=email]:focus,
 select:focus,
 textarea:focus {
-  border-color: #0086e6;
-  box-shadow: 0 0 2px 1px #b3dfff inset, 0 0 2px 1px #b3dfff;
+  border-color: #0056b3;
+  box-shadow: 0 0 2px 1px #80bdff inset, 0 0 2px 1px #80bdff;
 }
 
 .input-group {
