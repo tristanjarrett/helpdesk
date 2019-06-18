@@ -357,9 +357,11 @@ h6 {
 }
 
 a {
+  color: #0086e6;
   text-decoration: none;
 }
 a:hover {
+  color: #0068b3;
   text-decoration: underline;
 }
 
@@ -394,7 +396,7 @@ a:hover {
   border-radius: 0.25rem;
   text-decoration: none !important;
   display: inline-block;
-  border: solid 2px transparent;
+  border: solid 1px transparent;
   cursor: pointer;
 }
 .button-lg:hover, .button-md:hover, .button-sm:hover {
@@ -543,7 +545,7 @@ select,
 textarea {
   width: 100%;
   padding: 0.5rem 1rem;
-  border: solid 2px #ced3d8;
+  border: solid 1px #ced3d8;
   border-radius: 0.25rem;
   box-sizing: border-box;
   resize: vertical;
@@ -615,8 +617,7 @@ html, body {
 
 .header {
   padding: 0.5rem 0;
-  background-color: #323436;
-  color: #ffffff !important;
+  background-color: #ffffff;
 }
 .header .nav_flex {
   display: flex;
@@ -624,7 +625,6 @@ html, body {
   justify-content: space-between;
 }
 .header a {
-  color: #ffffff;
   text-decoration: none;
 }
 .header a:hover {
@@ -650,10 +650,6 @@ html, body {
   list-style-type: none;
   margin-left: 0.75rem;
 }
-.header ul.header_menu_right .display_name {
-  font-weight: bold;
-}
-
 .brand {
   color: #666666;
   text-decoration: none !important;

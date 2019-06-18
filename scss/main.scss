@@ -15,15 +15,13 @@ html, body {
 
 .header {
   padding: .5rem 0;
-  background-color: #323436;
-  color: #ffffff !important;
+  background-color: #ffffff;
   .nav_flex {
     display: flex;
     align-items: center;
     justify-content: space-between;
   }
   a {
-    color: #ffffff;
     text-decoration: none;
     &:hover {
       text-decoration: underline;
@@ -49,7 +47,6 @@ html, body {
       margin-left: .75rem;
     }
     .display_name {
-      font-weight: bold;
     }
   }
 }
