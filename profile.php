@@ -8,11 +8,10 @@
 		header("location: login.php");
 	}
 
+	include 'inc/users/update.php';
+
 	$pageTitle = 'Profile';
 	include 'header.php';
-
-	// edit user script (after header)
-	include 'inc/users/update.php';
 ?>
 
 		<main>

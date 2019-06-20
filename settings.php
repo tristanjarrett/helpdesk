@@ -8,11 +8,11 @@
 		header("location: login.php");
 	}
 
+	include 'inc/users/create.php';
+	
 	$pageTitle = 'Settings';
  	include 'header.php';
 
-	// new user script (after header)
-	include 'inc/users/create.php';
 ?>
 
 	<?php if ($_SESSION['my_user_perm'] == 'admin') : ?>
