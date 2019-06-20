@@ -14,9 +14,9 @@ CREATE TABLE `tickets` (
   `id` int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
   `type` varchar(100) NOT NULL,
   `priority` varchar(100) NOT NULL,
-  `timestamp` varchar(100) NOT NULL,
+  `timestamp` timestamp NOT NULL,
   `summary` varchar(100) NOT NULL,
-  `description` varchar(100) NOT NULL,
+  `description` text NOT NULL,
   `logged_by` varchar(100) NOT NULL
 );
 ```

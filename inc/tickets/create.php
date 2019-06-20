@@ -22,7 +22,6 @@
 		$priority = mysqli_real_escape_string($db, $_POST['priority']);
 		$summary = mysqli_real_escape_string($db, $_POST['summary']);
 		$description = mysqli_real_escape_string($db, $_POST['description']);
-		$timestamp = date('d/m/Y');
 		$logged_by = $_SESSION['my_id'];
 
 		// ensure that the form is correctly filled
@@ -41,7 +40,7 @@
 
 		// create ticket if there are no errors in the form
 		if (count($errors) == 0) {
-			$query = "INSERT INTO tickets (type, priority, timestamp, summary, description, logged_by) VALUES('$type', '$priority', '$timestamp', '$summary', '$description', '$logged_by')";
+			$query = "INSERT INTO tickets (type, priority, summary, description, logged_by) VALUES('$type', '$priority', '$summary', '$description', '$logged_by')";
 			mysqli_query($db, $query);
 
 			$_SESSION['success'] = '<span style="color: green;">New ticket created successfully</span>';
