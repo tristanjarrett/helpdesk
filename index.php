@@ -47,10 +47,10 @@
 								if ($result_sql-> num_rows > 0) {
 									while ($row_sql = $result_sql->fetch_assoc()) {
 
+										// get Name by ID
 										$user_id = $row_sql['logged_by'];
 										$logged_by_user_id = "";
-
-										// get Name by ID
+										
 										$name_sql = "SELECT fname, lname, email FROM users WHERE id='".$user_id."'";
 										$return_sql = $db-> query($name_sql);
 										if ($return_sql-> num_rows > 0) {
@@ -68,9 +68,11 @@
 										}
 										// end get Name by ID
 
+										$id = $row_sql["id"];
+
 										echo "<tr>";
 										echo "<td>" . $row_sql["id"] . "</td>";
-										echo "<td>" . $row_sql["summary"] . "</td>";
+										echo "<td><a href='ticket.php?id=".$id."'>" . $row_sql["summary"] . "</a></td>";
 										echo "<td>" . $row_sql["type"] . "</td>";
 										echo "<td>" . $logged_by_user_id . "</td>";
 										echo "<td>" . $row_sql["priority"] . "</td>";

@@ -46,9 +46,11 @@
 								if ($result_sql-> num_rows > 0) {
 									while ($row_sql = $result_sql->fetch_assoc()) {
 
+										$id = $row_sql["id"];
+
 										echo "<tr>";
 										echo "<td>" . $row_sql["id"] . "</td>";
-										echo "<td>" . $row_sql["summary"] . "</td>";
+										echo "<td><a href='ticket.php?id=".$id."'>" . $row_sql["summary"] . "</a></td>";
 										echo "<td>" . $row_sql["type"] . "</td>";
 										echo "<td>" . $row_sql["priority"] . "</td>";
 										echo "<td>" . $row_sql["timestamp"] . "</td>";
