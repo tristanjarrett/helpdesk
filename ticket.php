@@ -50,14 +50,13 @@
 
 									<h1 class="page_title"><?php echo $row["summary"]; ?></h1>
 
-									<p>
-									<?php echo $row["id"]; ?>
-									<?php echo $row["type"]; ?>
-									<?php echo $row["priority"]; ?>
-									<?php echo $row["timestamp"]; ?>
-									<?php echo $logged_by_user_id; ?>
-									</p>
+									<ul>
+										<li>Type: <?php echo $row["type"]; ?></li>
+										<li>Priority: <?php echo $row["priority"]; ?></li>
+										<li>Logged by <?php echo $logged_by_user_id; ?> on <?php echo $row["timestamp"]; ?></li>
+									</ul>
 
+									<hr>
 									<p><?php echo $row["description"]; ?></p>
 
 
